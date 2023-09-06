@@ -31,17 +31,17 @@ Click `Allocate IP to Project`
 
 Within the `Allocate Floating IP` dialog you have the following options
 
-- **Pool**
-> The pool that the floating ip should be allocated from. There is only external currently so is set as the default.
+`Pool`
+:   The pool that the floating ip should be allocated from. There is only external currently so is set as the default.
 
-- **Description**
-> A friendly description for what this IP is used for
+`Description`
+:   A friendly description for what this IP is used for
 
-- **DNS Domain**
-> TODO: Confirm with Sean what this means
+`DNS Domain`
+:   TODO: Confirm with Sean what this means
 
-- **DNS Name**
-> TODO: Confirm with Sean what this means
+`DNS Name`
+:   TODO: Confirm with Sean what this means
 
 !!! note
     The default settings are fine should you not wish to configure anything further.

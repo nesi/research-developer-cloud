@@ -29,52 +29,51 @@ Within the `Launch Instance` dialog box there are the following values:
 
 **Details**
 
-- *Project Name*
-> The name of the project that this instance will be deployed under.
+`Project Name`
+:   The name of the project that this instance will be deployed under.
 
-- *Instance Name*
-> The name of the VM/Instance. The name you assign here becomes the initial host name of the server.
+`Instance Name`
+:   The name of the VM/Instance. The name you assign here becomes the initial host name of the server.
 
 !!! note
     After the server is built, if you change the server name in the API or change the host name directly, the names are not updated in the dashboard.
 
     Server names are not guaranteed to be unique when created so you could have two instances with the same host name.
 
-- *Description*
-> A brief description of the VM/Instance.
+`Description`
+:   A brief description of the VM/Instance.
 
-- *Availability Zone*
-> By default this will be “nova“. This specifies which zone it will be deployed too if there were multiple zones. The current default and only zone is “nova“ at this point in time.
+`Availability Zone`
+:   By default this will be “nova“. This specifies which zone it will be deployed too if there were multiple zones. The current default and only zone is “nova“ at this point in time.
 
-- *Count*
-> how many of the VMs/Instances you would like to deploy.
+`Count`
+: how many of the VMs/Instances you would like to deploy.
 
-- *Source*
-> Select Boot Source
->> **Boot from image**
->>
->> Selecting this option allows you to choose from a list of images to boot from, a list of images will be presented to choose from.
->
->> **Boot from instance snapshot**
->>
->> Selecting this option allows you to choose an instance snapshot to boot from, a list of instance snapshots will be presented to choose from.
->
->> **Boot from volume**
->> Selecting this option allows you to choose a volume to boot from, a list of volumes will be presented to choose from.
->
->> **Boot from volume snapshot**
->> Selecting this option allows you to choose a volume snapshot to boot from, a list of volume snapshots will be presented to choose from.
+`Source`
+:   Select Boot Source
 
-- *Delete Volume on Instance Delete*
-> Selecting YES will enable the volume to be deleted when the instance is deleted.
+    `Boot from image`
+    :    Selecting this option allows you to choose from a list of images to boot from, a list of images will be presented to choose from.
 
-- *Volume Size (GB)*
-> This will be present should the user choose to boot from image or instance snapshot. This setting determines the size of the boot volume. This will be overridden when selecting a flavor if its less then the flavor's size.
+    `Boot from instance snapshot`
+    :    Selecting this option allows you to choose an instance snapshot to boot from, a list of instance snapshots will be presented to choose from.
+
+    `Boot from volume`
+    :   Selecting this option allows you to choose a volume to boot from, a list of volumes will be presented to choose from.
+
+    `Boot from volume snapshot`
+    :   Selecting this option allows you to choose a volume snapshot to boot from, a list of volume snapshots will be presented to choose from.
+
+`Delete Volume on Instance Delete`
+:   Selecting YES will enable the volume to be deleted when the instance is deleted.
+
+`Volume Size (GB)`
+:   This will be present should the user choose to boot from image or instance snapshot. This setting determines the size of the boot volume. This will be overridden when selecting a flavor if its less then the flavor's size.
 
 **Flavor**
 
-- *Flavor*
-> Specify the size of the instance to launch, click the ^ to select the instance size you are after.
+`Flavor`
+:   Specify the size of the instance to launch, click the `^` to select the instance size you are after.
 
 !!! note
     Instance sizes have a brief explanation in the name of what they are best used for.
@@ -83,8 +82,8 @@ Within the `Launch Instance` dialog box there are the following values:
 
 **Networks**
 
-- *Selected Networks*
-> To add a network to the instance, click the `^` in the Available field.
+`Selected Networks`
+:   To add a network to the instance, click the `^` in the Available field.
 
 !!! note
     If you haven't configured a network prior to the creation of a compute instance then the recommend network should be the one that has the same name as the project you are in. Example, I am in the `NeSI-SandBox-Environment` so I will pick the `NeSI-SandBox-Environment` network.
@@ -119,8 +118,8 @@ If the image uses a static root password or a static key set (neither is recomme
 
 **Configuration**
 
-- *Customization Script Source*
-> Specify a customization script that runs after your instance launches. This can either be applied by uploading a file from your local machine or entered manually within the textbox provided.
+`Customization Script Source`
+:   Specify a customization script that runs after your instance launches. This can either be applied by uploading a file from your local machine or entered manually within the textbox provided.
 
 **Server Groups**
 
@@ -137,8 +136,8 @@ These are tags or labels that tell the underlying FlexiHPC on where to deploy an
 
 **Metadata**
 
-- *Available Metadata*
-> Add Metadata items to your instance.
+`Available Metadata`
+:   Add Metadata items to your instance.
 
 Click `Launch Instance`.
 

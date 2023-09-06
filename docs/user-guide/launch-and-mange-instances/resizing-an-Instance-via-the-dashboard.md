@@ -27,11 +27,11 @@ Under the `Actions` menu on the far right, select `Resize Instance`
 
 Within the `Resize Instance` dialog, under the `Flavor Choice` tab you have the following options
 
-- **Old Flavor**
-> This is the flavor your compute instance is currently
+`Old Flavor`
+:   This is the flavor your compute instance is currently
 
-- **New Flavor**
-> This is the flavor you would like to resize your compute instance too.
+`New Flavor`
+:   This is the flavor you would like to resize your compute instance too.
 
 <figure markdown>
   ![Alt text](../../images/flexi/resize-instance-dialog.png)
@@ -39,8 +39,8 @@ Within the `Resize Instance` dialog, under the `Flavor Choice` tab you have the 
 
 Under the Advanced Options tab 
 
-- **Disk Partition**
-> The Default is Automatic if you don't want the disk to resize upon resize then select Manual. 
+`Disk Partition`
+:   The Default is Automatic if you don't want the disk to resize upon resize then select Manual. 
 
 !!! note
     The disk will resize if you booted from image and the image is bigger or smaller then the current one you are running. By default flavors have a disk size of 30 GB and that will generally stay at the same size
