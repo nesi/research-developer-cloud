@@ -9,7 +9,7 @@ vote_count: 1
 vote_sum: 1
 ---
 
-Log into the NeSI FlexiHPC Dashboard
+Log into the [NeSI FlexiHPC Dashboard](https://dashboard.cloud.nesi.org.nz/)
 
 Select the project you would like to deploy the new instance too (Use the project selector on the top left-hand side):
 
@@ -147,4 +147,4 @@ The instance starts on a compute node in the cloud.
 !!! info
     If you require an external connection to this instance then a floating IP is required. The article
 
-    Assign Floating IP to an Instance via the Dashboard will detail the requirements to complete this.
+    [Manage Floating IPs via the Dashboard](manage-floating-ips-via-the-dashboard.md) will detail the requirements to complete this.

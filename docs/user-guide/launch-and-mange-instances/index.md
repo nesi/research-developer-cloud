@@ -45,6 +45,6 @@ Resizing an instance allows you to scale the instance either up, if your workloa
 
 FlexiHPC allows you to resize and instance in 2 ways
 
-- Resizing an instance via the dashboard
+- [Resizing an instance via the dashboard](resizing-an-Instance-via-the-dashboard.md)
 
 - Resizing an instance via CLI
