@@ -1,4 +1,4 @@
-site_name: My Docs
+site_name: NeSI FlexiHPC
 theme:
   name: material
   features:
@@ -22,3 +22,4 @@ markdown_extensions:
 
 plugins:
   - glightbox
+  - search
