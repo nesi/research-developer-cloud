@@ -28,7 +28,7 @@ Example with the values supplied
 openstack server create --flavor e3a1ec6d-9513-4b9f-9580-671c4eee1c21 --image a5c9b7b2-e77b-4094-99ac-db0cf5181da5 --key-name test-key-pair --security-group 7200b28f-9089-4797-a094-39f1995e6f0c --network d3a7ddb5-6582-42cf-978a-c99b4ed25ad4 test-instance-wiki
 ```
 
-```
+``` { .sh .no-copy }
 +-----------------------------+-----------------------------------------------------------+
 | Field                       | Value                                                     |
 +-----------------------------+-----------------------------------------------------------+
@@ -76,7 +76,7 @@ openstack server list
 
 The list shows the ID, name, status, and private (and if assigned, public) IP addresses for all instances in the project to which you belong:
 
-```
+``` { .sh .no-copy }
 +--------------------------------------+---------------------------------------+--------+----------------------------------------------+--------------------------+--------------------+
 | ID                                   | Name                                  | Status | Networks                                     | Image                    | Flavor             |
 +--------------------------------------+---------------------------------------+--------+----------------------------------------------+--------------------------+--------------------+

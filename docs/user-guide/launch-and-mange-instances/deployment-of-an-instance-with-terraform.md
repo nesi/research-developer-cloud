@@ -18,7 +18,7 @@ Once you are in an empty folder, example `terraform-example-flexihpc`, we will n
 
 Inside this file we will need to define the provider
 
-```
+``` hcl
 provider "openstack" {
   auth_url    = "https://keystone.akl-1.cloud.nesi.org.nz/v3"
   user_name   = "FLEXIHPC_USERNAME"
@@ -32,7 +32,7 @@ Replace the placeholders `FLEXIHPC_USERNAME`, `FLEXIHPC_PASSWORD` and `FLEXIHPC_
 
 Then within the same file we want to define the compute instance
 
-```
+``` hcl
 resource "openstack_compute_instance_v2" "compute_instance" {
   name            = "compute-instance-0"
   flavor_id       = "FLEXIHPC_FLAVOR_ID"
@@ -52,7 +52,7 @@ The network name is normally the same as your FlexiHPC project name.
 
 Then we want to apply a floating IP to the instance so we can connect from outside the FlexiHPC platform
 
-```
+``` hcl
 resource "openstack_networking_floatingip_v2" "floating_ip" {
   pool = "external"
 }
@@ -87,7 +87,7 @@ Remember that this is a basic example, and you might need to adapt it to your sp
 
 The full `main.tf` file for completeness
 
-```
+``` hcl title="main.tf"
 terraform {
 required_version = ">= 0.14.0"
   required_providers {

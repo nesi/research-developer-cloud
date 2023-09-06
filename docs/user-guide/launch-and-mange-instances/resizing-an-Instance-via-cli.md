@@ -22,7 +22,7 @@ Run the following command to return a list of servers within your project space
 openstack server list
 ```
 
-```
+``` { .sh .no-copy }
 +--------------------------------------+--------------------------+-----------+---------------------------------------------------------------------------+--------------------------+-----------------------+
 | ID                                   | Name                     | Status    | Networks                                                                  | Image                    | Flavor                |
 +--------------------------------------+--------------------------+-----------+---------------------------------------------------------------------------+--------------------------+-----------------------+
@@ -41,7 +41,7 @@ Then run the following command to return a list of flavors
 openstack flavor list
 ```
 
-```
+``` { .sh .no-copy }
 +--------------------------------------+-------------------------+--------+------+-----------+-------+-----------+
 | ID                                   | Name                    |    RAM | Disk | Ephemeral | VCPUs | Is Public |
 +--------------------------------------+-------------------------+--------+------+-----------+-------+-----------+
@@ -96,7 +96,7 @@ openstack server show <INSTANCE_ID>
 
 This will return the server details and there will be the status
 
-```
+``` { .sh .no-copy }
 | status                              | VERIFY_RESIZE
 ```
 
@@ -120,12 +120,12 @@ openstack server show <INSTANCE_ID>
 
 The status of the instance should now be `ACTIVE`
 
-```
+``` { .sh .no-copy }
 | status                              | ACTIVE
 ```
 
 You should also see the new `flavor` that the instance has been resized too
 
-```
+``` { .sh .no-copy }
 | flavor                              | balanced1.2cpu4ram (balanced1.2cpu4ram)
 ```

@@ -22,7 +22,7 @@ List the available images.
 openstack image list
 ```
 
-```
+``` { .sh .no-copy }
 +--------------------------------------+----------------------------------------------------------+--------+
 | ID                                   | Name                                                     | Status |
 +--------------------------------------+----------------------------------------------------------+--------+
@@ -69,7 +69,7 @@ We also need to list the available flavors.
 openstack flavor list
 ```
 
-```
+``` { .sh .no-copy }
 +--------------------------------------+-------------------------+--------+------+-----------+-------+-----------+
 | ID                                   | Name                    |    RAM | Disk | Ephemeral | VCPUs | Is Public |
 +--------------------------------------+-------------------------+--------+------+-----------+-------+-----------+
@@ -111,7 +111,7 @@ Get a list of networks
 openstack network list
 ```
 
-```
+``` { .sh .no-copy }
 +--------------------------------------+--------------------------------+--------------------------------------+
 | ID                                   | Name                           | Subnets                              |
 +--------------------------------------+--------------------------------+--------------------------------------+
@@ -152,7 +152,7 @@ Using or example values the command looks like the following
 openstack server create --flavor 3b5a6e01-d3ad-49e3-a4f8-183c04444330 --network d3a7ddb5-6582-42cf-978a-c99b4ed25ad4 --image a5c9b7b2-e77b-4094-99ac-db0cf5181da5 --boot-from-volume 80 --key-name kahus-key --wait Ubuntu_boot_volume
 ```
 
-```
+``` { .sh .no-copy }
 +-----------------------------+----------------------------------------------------------+
 | Field                       | Value                                                    |
 +-----------------------------+----------------------------------------------------------+
@@ -200,7 +200,7 @@ We will use the `Ubuntu-Jammy-22.04` image with the ID `a5c9b7b2-e77b-4094-99ac-
 openstack volume create --image a5c9b7b2-e77b-4094-99ac-db0cf5181da5 --size 80 my_ubuntu_volume
 ```
 
-```
+``` { .sh .no-copy }
 +---------------------+--------------------------------------+
 | Field               | Value                                |
 +---------------------+--------------------------------------+
@@ -240,7 +240,7 @@ We will supply the `balanced1.1cpu2ram` ID for flavor and our volume ID of `3dd4
 openstack server create --flavor 3b5a6e01-d3ad-49e3-a4f8-183c04444330 --volume 3dd489d8-7c44-4c59-b4af-0c804ddf4729 --network d3a7ddb5-6582-42cf-978a-c99b4ed25ad4 --key-name kahus-key Ubuntu_From_Volume
 ```
 
-```
+``` { .sh .no-copy }
 +-----------------------------+-----------------------------------------------------------+
 | Field                       | Value                                                     |
 +-----------------------------+-----------------------------------------------------------+
