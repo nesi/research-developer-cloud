@@ -35,10 +35,10 @@ Within the `Launch Instance` dialog box there are the following values:
 - *Instance Name*
 > The name of the VM/Instance. The name you assign here becomes the initial host name of the server.
 
+!!! note
+    After the server is built, if you change the server name in the API or change the host name directly, the names are not updated in the dashboard.
 
-After the server is built, if you change the server name in the API or change the host name directly, the names are not updated in the dashboard.
-
-Server names are not guaranteed to be unique when created so you could have two instances with the same host name.
+    Server names are not guaranteed to be unique when created so you could have two instances with the same host name.
 
 - *Description*
 > A brief description of the VM/Instance.
@@ -76,18 +76,20 @@ Server names are not guaranteed to be unique when created so you could have two 
 - *Flavor*
 > Specify the size of the instance to launch, click the ^ to select the instance size you are after.
 
-Instance sizes have a brief explanation in the name of what they are best used for.
+!!! note
+    Instance sizes have a brief explanation in the name of what they are best used for.
 
-Example `compute1.1cpu2ram` is best for Compute heavy workloads with 1 vCPU and 2 GB of RAM or `memory1.1cpu4ram` is best for Memory heavy workloads with 1 vCPU and 4 GB of RAM
+    Example `compute1.1cpu2ram` is best for Compute heavy workloads with 1 vCPU and 2 GB of RAM or `memory1.1cpu4ram` is best for Memory heavy workloads with 1 vCPU and 4 GB of RAM
 
 **Networks**
 
 - *Selected Networks*
 > To add a network to the instance, click the `^` in the Available field.
 
-If you haven't configured a network prior to the creation of a compute instance then the recommend network should be the one that has the same name as the project you are in. Example, I am in the NeSI-SandBox-Environment so I will pick the NeSI-SandBox-Environment network.
+!!! note
+    If you haven't configured a network prior to the creation of a compute instance then the recommend network should be the one that has the same name as the project you are in. Example, I am in the `NeSI-SandBox-Environment` so I will pick the `NeSI-SandBox-Environment` network.
 
-You shouldn't need to add the instance to an external network as a floating IP will be added later on should you need to access the instance from outside the FlexiHPC network.
+    You shouldn't need to add the instance to an external network as a floating IP will be added later on should you need to access the instance from outside the FlexiHPC network.
 
 **Network Ports**
 
@@ -101,17 +103,19 @@ Security groups are a kind of cloud firewall that define which incoming network 
 
 If you have not created any security groups, you can assign only the default security group to the instance.
 
-By default the default security group is added to all instances. This is required should the instance want to communicate to the outside world or to any other instance within the FlexiHPC project.
+!!! note
+    By default the `default` security group is added to all instances. This is required should the instance want to communicate to the outside world or to any other instance within the FlexiHPC project.
 
-How to create Security Groups are explained here How to add/update and remove security groups
+    How to create `Security Groups` are explained here How to add/update and remove security groups
 
 **Key Pair**
 
-Specify a key pair that is associated with your FlexiHPC user login. If there is none available then you can create one by clicking Create key Pair
+Specify a key pair that is associated with your FlexiHPC user login. If there is none available then you can create one by clicking `Create key Pair`
 
 If the image uses a static root password or a static key set (neither is recommended), you do not need to provide a key pair to launch the instance.
 
-The following Creating and Importing Key Pairs will also explain on how to import and create key pairs
+!!! info
+    The following Creating and Importing Key Pairs will also explain on how to import and create key pairs
 
 **Configuration**
 
@@ -122,9 +126,10 @@ The following Creating and Importing Key Pairs will also explain on how to impor
 
 Server groups determine the Policy that FlexiHPC should apply during the deployment of the instance in regards to other servers within the same group.
 
-By default an instance doesn't need to be in a Server Group, however should you want to apply policies to your servers then please read Server Groups within FlexiHPC to create a Server Group and also understand each policy.
+!!! info
+    By default an instance doesn't need to be in a Server Group, however should you want to apply policies to your servers then please read Server Groups within FlexiHPC to create a Server Group and also understand each policy.
 
-Server Group should be created prior to the creation of the instance if so required.
+    Server Group should be created prior to the creation of the instance if so required.
 
 **Scheduler Hints**
 
@@ -139,6 +144,7 @@ Click `Launch Instance`.
 
 The instance starts on a compute node in the cloud.
 
-If you require an external connection to this instance then a floating IP is required. The article
+!!! info
+    If you require an external connection to this instance then a floating IP is required. The article
 
-Assign Floating IP to an Instance via the Dashboard will detail the requirements to complete this.
+    Assign Floating IP to an Instance via the Dashboard will detail the requirements to complete this.
