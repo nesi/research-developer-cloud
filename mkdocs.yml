@@ -28,9 +28,7 @@ theme:
   features:
     - content.code.copy
     - navigation.tabs
-    - navigation.expand
     - navigation.path
-    - navigation.expand
     - navigation.indexes
     - navigation.top
 
