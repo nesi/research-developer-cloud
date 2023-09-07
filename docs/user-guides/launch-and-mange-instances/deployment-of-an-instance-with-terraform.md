@@ -3,10 +3,8 @@ hidden: false
 label_names:
 - instance
 - resize
-position: 2
 title: Deployment of an instance with Terraform
-vote_count: 1
-vote_sum: 1
+position: 10
 ---
 
 !!! note

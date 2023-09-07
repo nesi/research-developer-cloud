@@ -4,7 +4,7 @@ label_names:
 - instance
 - launch
 position: 1
-title: Setting up your CLI environment to interact with FlexiHPC
+title: Set up your CLI environment
 vote_count: 1
 vote_sum: 1
 ---

@@ -1,32 +1,32 @@
 site_name: NeSI FlexiHPC
 
-nav:
-  - Home: 'index.md'
-  - 'User Guides':
-    - 'User Guides': user-guide/index.md
-    - 'Launch and mange Instances':
-      - 'Launch and mange Instances': user-guide/launch-and-mange-instances/index.md
-      - 'With the Dashboard':
-        - 'Launch an Instance': user-guide/launch-and-mange-instances/launch-an-instance-via-dashboard.md
-        - 'Resizing an Instance': user-guide/launch-and-mange-instances/resizing-an-Instance-via-the-dashboard.md
-        - 'Manage Floating IPs': user-guide/launch-and-mange-instances/manage-floating-ips-via-the-dashboard.md
-      - 'With the CLI':
-        - 'Launch an Instance': user-guide/launch-and-mange-instances/launch-an-instance-via-cli.md
-        - 'Launch an Instance from an Image': user-guide/launch-and-mange-instances/launch-an-instance-from-an-image.md
-        - 'Launch an Instance from a Volume': user-guide/launch-and-mange-instances/launch-an-instance-from-a-volume.md
-        - 'Resizing an Instance': user-guide/launch-and-mange-instances/resizing-an-Instance-via-cli.md
-        - 'Manage Floating IPs': user-guide/launch-and-mange-instances/manage-floating-ips-via-cli.md
-      - 'Other Tools':
-        - 'Deploy with Terraform': user-guide/launch-and-mange-instances/deployment-of-an-instance-with-terraform.md
-    - 'Upload and mange Images':
-      - 'Upload and mange Images': user-guide/uploading-and-managing-Images/index.md
-      - 'With the Dashboard':
-        - 'Upload an Image': user-guide/uploading-and-managing-Images/upload-an-image-via-the-dashboard.md
-        - 'Managing Images': user-guide/uploading-and-managing-Images/managing-images-via-the-dashboard.md
-      - 'With the CLI':
-        - 'Upload an Image': user-guide/uploading-and-managing-Images/upload-an-image-via-cli.md
-        - 'Managing Images': user-guide/uploading-and-managing-Images/managing-images-via-cli.md
-    - 'Setting up your CLI Environment': user-guide/setting-up-your-CLI-environment/setting-up-your-cli-environment.md
+# nav:
+#   - Home: 'index.md'
+#   - 'User Guides':
+#     - 'User Guides': user-guide/index.md
+#     - 'Launch and mange Instances':
+#       - 'Launch and mange Instances': user-guide/launch-and-mange-instances/index.md
+#       - 'With the Dashboard':
+#         - 'Launch an Instance': user-guide/launch-and-mange-instances/launch-an-instance-via-dashboard.md
+#         - 'Resizing an Instance': user-guide/launch-and-mange-instances/resizing-an-Instance-via-the-dashboard.md
+#         - 'Manage Floating IPs': user-guide/launch-and-mange-instances/manage-floating-ips-via-the-dashboard.md
+#       - 'With the CLI':
+#         - 'Launch an Instance': user-guide/launch-and-mange-instances/launch-an-instance-via-cli.md
+#         - 'Launch an Instance from an Image': user-guide/launch-and-mange-instances/launch-an-instance-from-an-image.md
+#         - 'Launch an Instance from a Volume': user-guide/launch-and-mange-instances/launch-an-instance-from-a-volume.md
+#         - 'Resizing an Instance': user-guide/launch-and-mange-instances/resizing-an-Instance-via-cli.md
+#         - 'Manage Floating IPs': user-guide/launch-and-mange-instances/manage-floating-ips-via-cli.md
+#       - 'Other Tools':
+#         - 'Deploy with Terraform': user-guide/launch-and-mange-instances/deployment-of-an-instance-with-terraform.md
+#     - 'Upload and mange Images':
+#       - 'Upload and mange Images': user-guide/uploading-and-managing-Images/index.md
+#       - 'With the Dashboard':
+#         - 'Upload an Image': user-guide/uploading-and-managing-Images/upload-an-image-via-the-dashboard.md
+#         - 'Managing Images': user-guide/uploading-and-managing-Images/managing-images-via-the-dashboard.md
+#       - 'With the CLI':
+#         - 'Upload an Image': user-guide/uploading-and-managing-Images/upload-an-image-via-cli.md
+#         - 'Managing Images': user-guide/uploading-and-managing-Images/managing-images-via-cli.md
+#     - 'Setting up your CLI Environment': user-guide/setting-up-your-CLI-environment/setting-up-your-cli-environment.md
   # - About:
   #   - 'License': 'license.md'
   #   - 'Release Notes': 'release-notes.md'
@@ -36,7 +36,6 @@ theme:
   features:
     - content.code.copy
     - navigation.tabs
-    - navigation.path
     - navigation.indexes
     - navigation.top
 
@@ -51,7 +50,6 @@ markdown_extensions:
   - attr_list
   - md_in_html
   - admonition
-  - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true 
   - def_list
@@ -59,3 +57,5 @@ markdown_extensions:
 plugins:
   - glightbox
   - search
+  - literate-nav:
+      nav_file: summary.md
