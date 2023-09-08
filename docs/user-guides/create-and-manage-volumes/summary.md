@@ -1,4 +1,4 @@
-* [Create and Manage Volumes](index.md)
+* [Volumes: Create and Manage](index.md)
 * With the Dashboard
     * [Create and Manage](create-and-manage-volumes-with-the-dashboard.md)
 * With the CLI

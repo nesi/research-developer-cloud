@@ -96,3 +96,19 @@ Select the project you would like to deploy the new instance too (Use the projec
 </figure>
 
 Open the `Project` tab, open the `Network` tab and select the `Networks` category
+
+Select the network you wish to delete with the check box
+
+<figure markdown>
+  ![Alt text](../../images/flexi/networks-overview-selected.png)
+</figure>
+
+The `Delete Network` button should become a solid red
+
+Click `Delete Network`
+
+Within the `Confirm Delete Network` dialog ensure you have selected the correct network that is displayed.
+
+Click `Delete Networks`
+
+The network should now be deleted

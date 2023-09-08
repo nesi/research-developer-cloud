@@ -1,4 +1,4 @@
-* [Upload and Manage Images](index.md)
+* [Images: Upload and Manage](index.md)
 * With the Dashboard
     * [Upload Image](upload-an-image-via-the-dashboard.md)
     * [Managing Images](managing-images-via-the-dashboard.md)

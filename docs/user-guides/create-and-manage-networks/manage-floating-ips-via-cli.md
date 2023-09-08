@@ -12,11 +12,6 @@ vote_sum: 1
 !!! note
     The openstack CLI will need to be setup to interact with the FlexiHPC system. Please read [Setting up your CLI environment](../setting-up-your-CLI-environment/index.md) to interact with FlexiHPC to get started.
 
-When an instance is created in FlexiHPC, it is automatically assigned a fixed IP address in the network to which the instance is assigned. This IP address is permanently associated with the instance until the instance is terminated.
-
-However, in addition to the fixed IP address, a floating IP address can also be attached to an instance. Unlike fixed IP addresses, floating IP addresses can have their associations modified at any time, regardless of the state of the instances involved. This procedure details the reservation of a floating IP address from an existing pool of addresses and the association of that address with a specific instance.
-
-If you wish to connect to an instance within the FlexiHPC platform from outside then these are required.
 
 Use the `openstack` commands to manage floating IP addresses.
 

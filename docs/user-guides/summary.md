@@ -1,6 +1,7 @@
 * [User Guides](index.md)
-* [Launch and Manage Instances](launch-and-mange-instances/)
-* [Upload and Manage Images](uploading-and-managing-Images/)
-* [Create and Manage Volumes](create-and-manage-volumes/)
+* [Compute: Create and Manage](launch-and-mange-instances/)
+* [Images: Upload and Manage](uploading-and-managing-Images/)
+* [Volumes: Create and Manage](create-and-manage-volumes/)
+* [Networks: Create and Manage](create-and-manage-networks/)
 * [Set up your CLI environment](setting-up-your-CLI-environment/)
 * */
