@@ -18,7 +18,7 @@ Networks can be created and managed in 2 ways
 
 - [Create and Manage networks with the Dashboard](create-and-manage-networks-with-the-dashboard.md)
 
-- Create and Manage networks via CLI
+- [Create and Manage networks via CLI](create-and-manage-networks-via-cli.md)
 
 Within the network tab you also have the following that you are able to manage
 
@@ -30,7 +30,7 @@ Security Groups can be created and managed within the FlexiHPC dashboard. Howeve
 
 - [Create and Manage Security groups with the Dashboard](manage-security-groups-with-the-dashboard.md)
 
-- Manage Security groups via CLI
+- [Manage Security groups via CLI](manage-security-groups-via-cli.md)
 
 ## Floating IPs
 
@@ -52,4 +52,4 @@ These network ports can be managed 2 ways
 
 - [Create and Manage network ports with the Dashboard](create-and-manage-network-ports-with-the-dashboard.md)
 
-- Create and manage network ports via CLI
+- [Create and manage network ports via CLI](create-and-manage-network-ports-via-cli.md)
