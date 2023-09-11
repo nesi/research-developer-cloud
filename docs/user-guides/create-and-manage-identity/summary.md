@@ -1,6 +1,6 @@
 * [Identity: Create and Manage](index.md)
 * With the Dashboard
-    * [Networks](create-and-manage-networks-with-the-dashboard.md)
+    * [Create and Manage](creating-and-managing-application-credentials-with-the-dashboard.md)
 * With the CLI
-    * [Networks](create-and-manage-networks-via-cli.md)
+    * [Create and Manage](creating-and-managing-application-credentials-via-cli.md)
 * *
