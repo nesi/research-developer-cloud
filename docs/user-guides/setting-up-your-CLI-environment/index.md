@@ -156,7 +156,7 @@ source projectname-openrc.sh
 !!! note
     You are also able to download the Openstack RC file from the top-right corner where your login details are display as shown below:
     <figure markdown>
-        ![Alt text](../../images/flexi/user-menu.png)
+        ![Alt text](../../assets/images/flexi/user-menu.png)
     </figure>
     
 

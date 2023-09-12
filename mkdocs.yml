@@ -1,7 +1,7 @@
 site_name: FlexiHPC
 theme:
   name: material
-  logo: images/nesi-logo.png
+  logo: assets/images/nesi-logo.png
   palette:
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
@@ -38,9 +38,15 @@ markdown_extensions:
   - pymdownx.tabbed:
       alternate_style: true 
   - def_list
+  - tables
+  - neoteroi.cards
+  - neoteroi.timeline
 
 plugins:
   - glightbox
   - search
   - literate-nav:
       nav_file: summary.md
+
+extra_css:
+  - assets/css/neoteroi-mkdocs.css

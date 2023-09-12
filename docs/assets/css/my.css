@@ -1,0 +1,38 @@
+.home-container {  
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "get-started talk-to-us";
+}
+  
+.get-started { grid-area: get-started; }
+  
+.talk-to-us { grid-area: talk-to-us; }
+  
+.services-container {  
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 10px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "cloud-native programmable-infra partnership-led";
+}
+  
+.cloud-native { 
+    grid-area: cloud-native;
+}
+  
+.programmable-infra { grid-area: programmable-infra; }
+  
+.partnership-led { grid-area: partnership-led; }
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }

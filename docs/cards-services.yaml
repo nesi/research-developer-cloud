@@ -1,0 +1,16 @@
+- title: Cloud-native services
+  content: |
+    Use NeSI's cloud infrastructure and on-demand services to develop and manage custom,
+    interactive solutions.
+  image: ./assets/icons/cloud-arrow-up-solid.svg
+
+- title: Programmable infrastructure
+  content: |
+    Apply DevOps practices enabled by Infrastructure as Code (IaC) to automate, measure,
+    collaborate, and learn.
+  image: ./assets/icons/code-pull-request-solid.svg
+
+- title: Partnership-led approaches
+  content: |
+    Partner with NeSI's DevOps specialists to build a platform or tools that can benefit your research community.
+  image: ./assets/icons/handshake-solid.svg

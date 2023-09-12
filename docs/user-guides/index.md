@@ -1,18 +1,35 @@
-# Welcome to MkDocs
+# Flexi HPC Features
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+We want to partner with early access users to explore and build scalable approaches for harnessing cloud technologies and DevOps practices in computational research.
 
-## Commands
+Our platform's building blocks include:
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+`Compute`
+:   Virtual machines optimised for high-performance computational needs. Multiple flavours of CPU and GPU resources to support a range of compute and memory requirements.
 
-## Project layout
+    → Get started with our [Compute User Guides](launch-and-mange-instances/index.md)
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+`Images`
+:   Tailored operating systems to meet your research computing and data needs. Ready-to-use options available, as well as capability to create custom images and contribute to a pool of community-developed images.
+
+    → Get started with our [Images User Guides](uploading-and-managing-Images/index.md)
+
+`Storage`
+:   Scalable storage space that can be dynamically mounted to your Compute instances. Options to encrypt storage volumes for added security.
+
+    → Get started with our [Storage User Guides](create-and-manage-volumes/index.md)
+
+`Networks`
+:   Fast, reliable, and secure connectivity built on the REANNZ national network. Options for network customisation and security groups.
+
+    → Get started with our [Networks User Guides](create-and-manage-networks/index.md)
+
+`Identity`
+:   Identity management services to create application credentials and control access to projects.
+
+    → Get started with our [Identity User Guides](create-and-manage-identity/index.md)
+
+`Application Programming Interface (API)`
+:   All services are programmable via a public API to enable repeatable definition of infrastructure through software code.
+
 

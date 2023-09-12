@@ -1,17 +1,10 @@
-# Welcome to MkDocs
+# NeSI Flexible High Performance Cloud
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+[cards cols=3 (./docs/cards-services.yaml)]
 
-## Commands
+NeSI is building a cloud computing platform for easier and more adaptable collaboration around scientific data.
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+Research teams can use our Flexible High Performance Cloud (Flexible HPC) services to develop novel solutions that enable science.
 
-## Project layout
+[cards cols=2 (./docs/cards-home.yaml)]
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
