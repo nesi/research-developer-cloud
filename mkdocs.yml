@@ -1,4 +1,5 @@
 site_name: FlexiHPC
+repo_url: https://github.com/nesi/flexi-docs
 theme:
   name: material
   logo: assets/images/nesi-logo.png
