@@ -1,5 +1,6 @@
 site_name: FlexiHPC
 repo_url: https://github.com/nesi/research-developer-cloud
+repo_name: nesi/research-developer-cloud
 theme:
   name: material
   custom_dir: overrides
