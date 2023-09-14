@@ -1,6 +1,6 @@
 # NeSI Flexible High Performance Cloud
 
-<div class="pillarwrapper">
+<!-- <div class="pillarwrapper">
     <div align="center" class="pillarcard"> 
         <img src="./assets/icons/iconmonstr-cloud-15.svg#only-light" width="80px" />
         <img src="./assets/icons/iconmonstr-cloud-14.svg#only-dark" width="80px" />
@@ -38,7 +38,7 @@
             </a>
         </div> 
     </div>
-</div>
+</div> -->
 
 [cards cols=3 (./docs/cards-services.yaml)]
 
