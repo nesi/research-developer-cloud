@@ -53,3 +53,4 @@ plugins:
 extra_css:
   - assets/css/neoteroi-mkdocs.css
   - assets/css/footer.css
+  - assets/css/my.css
