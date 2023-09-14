@@ -50,8 +50,10 @@ plugins:
   - search
   - literate-nav:
       nav_file: summary.md
+  - git-revision-date-localized:
+      enable_creation_date: true
 
 extra_css:
   - assets/css/neoteroi-mkdocs.css
   - assets/css/footer.css
-  - assets/css/my.css
+  # - assets/css/my.css
