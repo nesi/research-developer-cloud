@@ -86,4 +86,4 @@ The list shows the ID, name, status, and private (and if assigned, public) IP ad
 
 If the status for the instance is `ACTIVE`, the instance is online.
 
-If you would like to access your Compute instance outside the FlexiHPC platform you will need to associate a `floating ip` to your instance. Reading [Manage Floating IPs via CLI](manage-floating-ips-via-cli.md), You should then be able to connect to your instance using ssh which is explained more in Connect to your instance by using SSH.
+If you would like to access your Compute instance outside the FlexiHPC platform you will need to associate a `floating ip` to your instance. Reading [Manage Floating IPs via CLI](../create-and-manage-networks/manage-floating-ips-via-cli.md), You should then be able to connect to your instance using ssh which is explained more in Connect to your instance by using SSH.

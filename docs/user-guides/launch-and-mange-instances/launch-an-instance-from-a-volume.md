@@ -270,4 +270,4 @@ openstack server create --flavor 3b5a6e01-d3ad-49e3-a4f8-183c04444330 --volume 3
 
     Ubuntu and CentOS cloud images also don't allow password SSH by default.
 
-To allow external access a floating IP will need to be provided to the newly created instance, following [Manage Floating IPs via CLI](manage-floating-ips-via-cli.md) will complete this for you.
+To allow external access a floating IP will need to be provided to the newly created instance, following [Manage Floating IPs via CLI](../create-and-manage-networks/manage-floating-ips-via-cli.md) will complete this for you.

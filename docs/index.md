@@ -48,3 +48,14 @@ Research teams can use our Flexible High Performance Cloud (Flexible HPC) servic
 
 [cards cols=2 (./docs/cards-home.yaml)]
 
+## Get started
+
+We invite you to apply for early access if you are:
+
+- Developing complex solutions that support custom workflows and a range of user experiences
+ 
+- Seeking a locally owned and sovereign cloud computing platform to build and develop tools that can support research data collaborations 
+ 
+- Interested in partnering with NeSI to apply DevOps approaches and best practice to your research activities
+
+[Apply for Early access](https://docs.google.com/forms/d/e/1FAIpQLScYsLxe1HswOW9DFUNuhyTcYhdWY7-SZqTF3RpeBpFcyNdhUA/viewform)

@@ -146,4 +146,4 @@ The instance starts on a compute node in the cloud.
 !!! info
     If you require an external connection to this instance then a floating IP is required. The article
 
-    [Manage Floating IPs via the Dashboard](manage-floating-ips-via-the-dashboard.md) will detail the requirements to complete this.
+    [Manage Floating IPs via the Dashboard](../create-and-manage-networks/manage-floating-ips-via-the-dashboard.md) will detail the requirements to complete this.

@@ -139,7 +139,7 @@ Click `Attach Interface`
 The instance should now have the new network port attached
 
 <figure markdown>
-  ![Alt text](../../assets/images/flexi/compute-network-port-attach.png)
+  ![Alt text](../../assets/images/flexi/compute-network-port-attached.png)
 </figure>
 
 ## Detach a network port from an instance
