@@ -1,6 +1,6 @@
-# NeSI FlexiHPC User Guide Documentation
+# NeSI Research Developer Cloud User Guides
 
-This is the content that hosts the site https://nesi.github.io/flexi-docs/
+This is the content hosted on the site https://support.cloud.nesi.org.nz/
 
 ## File layout
 
@@ -31,4 +31,4 @@ https://squidfunk.github.io/mkdocs-material/
 
 ## Contributing
 
-We welcome contributions to our FlexiHPC User guides. Please read [CONTRIBUTING.md](CONTRIBUTION.md)
+We welcome contributions to our User Guides. Please read [CONTRIBUTING.md](CONTRIBUTION.md)
