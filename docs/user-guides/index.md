@@ -1,4 +1,4 @@
-# Flexi HPC Features
+# Features
 
 We want to partner with early access users to explore and build scalable approaches for harnessing cloud technologies and DevOps practices in computational research.
 
