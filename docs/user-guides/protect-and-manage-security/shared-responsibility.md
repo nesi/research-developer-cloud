@@ -2,7 +2,7 @@
 hidden: false
 label_names:
 - security
-title: What is a Shared Responsibility Model
+title: Shared Responsibility Model
 ---
 
 ## Establishing a Shared Responsibility Model
