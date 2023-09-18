@@ -29,6 +29,11 @@ Our platform's building blocks include:
 
     → Get started with our [Identity User Guides](create-and-manage-identity/index.md)
 
+`Security`
+:   Security policies, practices, guidelines, best practices.
+
+    → Exploring NeSI security practices [Security Guides](protect-and-manage-security/index.md)
+
 `Application Programming Interface (API)`
 :   All services are programmable via a public API to enable repeatable definition of infrastructure through software code.
 
