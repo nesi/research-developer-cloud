@@ -8,11 +8,10 @@ vote_count: 1
 vote_sum: 1
 ---
 
+NeSI is working 
 
+- [What is a Shared Responsibility Model](shared-responsibility.md)
 
-- [What is a Shared Responsibility Model](creating-and-managing-application-credentials-with-the-dashboard.md)
+- [NeSI's Security Policy](security-policy.md)
 
-- [NeSI's Security Policy](creating-and-managing-application-credentials-via-cli.md)
-
-!!! note
-    The Application Credential is dependent on the user account that created it, so it will terminate if that account is ever deleted, or loses access to the relevant role.
+- [Security Practices at NeSI](security-practices-infrastructure.md)
