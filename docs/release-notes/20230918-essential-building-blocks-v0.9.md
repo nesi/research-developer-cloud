@@ -3,7 +3,7 @@ hidden: false
 label_names:
 - release-note
 position: 3
-title: Essential building blocks v0.9 - 20230918 NZRSE23 (Draft)
+title: Essential building blocks v0.9 - 20230918 NZRSE23
 ---
 
 ##Overview
