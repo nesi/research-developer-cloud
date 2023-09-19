@@ -2,10 +2,10 @@
 hidden: false
 label_names:
 - images
-- visibilty
+- visibility
 - types
 position: 1
-title: Image Visibilty Types
+title: Image Visibility Types
 vote_count: 1
 vote_sum: 1
 ---
