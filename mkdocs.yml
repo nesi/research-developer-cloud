@@ -1,0 +1,59 @@
+site_name: FlexiHPC
+repo_url: https://github.com/nesi/research-developer-cloud
+repo_name: nesi/research-developer-cloud
+theme:
+  name: material
+  custom_dir: overrides
+  logo: assets/images/nesi-logo.png
+  palette:
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: white
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: white
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - content.code.copy
+    - navigation.tabs
+    - navigation.indexes
+    - navigation.top
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - attr_list
+  - md_in_html
+  - admonition
+  - pymdownx.tabbed:
+      alternate_style: true 
+  - def_list
+  - tables
+  - neoteroi.cards
+  - neoteroi.timeline
+
+plugins:
+  - glightbox
+  - search
+  - literate-nav:
+      nav_file: summary.md
+  - git-revision-date-localized:
+      enable_creation_date: true
+
+extra_css:
+  - assets/css/neoteroi-mkdocs.css
+  - assets/css/footer.css
+  # - assets/css/my.css
