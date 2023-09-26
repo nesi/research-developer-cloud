@@ -5,9 +5,9 @@ mkdocs-material
 mkdocs-spellcheck
 mkdocs-simple-hooks
 mkdocs-macros-plugin
+mkdocs-git-authors-plugin
+mkdocs-git-revision-date-localized-plugin
 proselint
 linkcheckmd
 symspellpy
 codespell
-neoteroi-mkdocs
-mkdocs-git-authors-plugin
