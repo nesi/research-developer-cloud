@@ -1,0 +1,13 @@
+mkdocs>=1.5
+mkdocs-section-index
+mkdocs-bootstrap4
+mkdocs-material
+mkdocs-spellcheck
+mkdocs-simple-hooks
+mkdocs-macros-plugin
+proselint
+linkcheckmd
+symspellpy
+codespell
+neoteroi-mkdocs
+mkdocs-git-authors-plugin
