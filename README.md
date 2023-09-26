@@ -6,21 +6,26 @@
 
 Location of markdown docs. File structure determines categories and sections
 
-### docs/assets
-
-This is broken down into a few things, treat this as site assets like `css`, `images` or `files(pdfs etc)`
+### docs/assets/css
+### docs/assets/javascript
+### docs/assets/images
+### docs/assets/icons
+### docs/assets/glossary
+Contains wordlists.
 
 ### docs/base_folder_name
 
 Subdirectories of docs become categories. If given a index.md, it will have it's own page.
 
-### summary.md and index
+### docs/summary.md
 
-These 2 files are used as the following
+If using literate-nav provides toc order.
 
-`index.md` is the base page for that section or group
+If not supplied then the site will tile all markdown docs out.
 
-`summary.md` is the nav structure for that section or group, if not supplied then the site will tile all markdown docs out
+### docs/index.md
+
+Landing page. When used in docs subdirectory, will make page as opposed to just a category.
 
 ### overrides/
 
@@ -37,21 +42,37 @@ Custom hooks.
 
 https://squidfunk.github.io/mkdocs-material/
 
+
+## Setting up a local development environment
+
+First time setup
+
+```sh
+git clone <path to repo>
+cd <name of repo>
+pip install -r requirements.txt
+```
+
+Build
+
+```sh
+mkdocs serve
+```
+
+Then browse to http://localhost:8000/
+
 ## Contributing
 
 We welcome contributions to our User Guides. Please read [CONTRIBUTING.md](CONTRIBUTION.md)
-Pages hosted [here](https://cwal219.pages.hpcf.nesi.org.nz/mkdocs).
 
-### Build filters
+## Formatting
+
+See [docs/format.md](docs/format.md)
+
+## Build filters
 
 These are filters that should be run whenever a page is edited.
 
 Currently triggered in CI
     - proselint
     - mdspellcheck
-
-Currently Being run through mkdocs:
-    - Spellcheck
-    - Dead link checker
-
-Would be better to run these independently so they can be run by gitlab CI.
