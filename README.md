@@ -87,5 +87,6 @@ See [docs/format.md](docs/format.md)
 These are filters that should be run whenever a page is edited.
 
 Currently triggered in CI
+
     - proselint 
     - mdspellcheck
