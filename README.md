@@ -7,10 +7,23 @@
 Location of markdown docs. File structure determines categories and sections
 
 ### docs/assets/css
+
+Additional stylesheets.
+
 ### docs/assets/javascript
+
+Additional Javascript.
+
 ### docs/assets/images
+
+Images, .png preferable.
+
 ### docs/assets/icons
+
+For svg, and characters.
+
 ### docs/assets/glossary
+
 Contains wordlists.
 
 ### docs/base_folder_name
@@ -74,5 +87,5 @@ See [docs/format.md](docs/format.md)
 These are filters that should be run whenever a page is edited.
 
 Currently triggered in CI
-    - proselint
+    - proselint 
     - mdspellcheck
