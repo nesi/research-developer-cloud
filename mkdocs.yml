@@ -1,10 +1,13 @@
-site_name: FlexiHPC
-repo_url: https://github.com/nesi/research-developer-cloud
-repo_name: nesi/research-developer-cloud
+site_name: Documentation Name
+repo_url: https://github.com/example/repository/
+repo_name: example/repository/
+site_description: Description
+site_dir: public
+site_url: https://github.com/nesi/support-docs-concept
 theme:
   name: material
   custom_dir: overrides
-  logo: assets/images/nesi-logo.png
+  logo: assets/icons/logo.svg
   palette:
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
@@ -13,7 +16,6 @@ theme:
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
-
     # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
@@ -21,39 +23,52 @@ theme:
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
+    
+  favicon: assets/icons/favicon.ico
   features:
     - content.code.copy
     - navigation.tabs
     - navigation.indexes
     - navigation.top
-
+  language: en
+hooks:
+  - custom_hooks.py
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
       pygments_lang_class: true
   - pymdownx.inlinehilite
-  - pymdownx.snippets
+  - pymdownx.snippets:
+      auto_append:
+        - assets/glossary/snippets.md
   - pymdownx.superfences
   - attr_list
   - md_in_html
   - admonition
   - pymdownx.tabbed:
-      alternate_style: true 
+      alternate_style: true
   - def_list
   - tables
-  - neoteroi.cards
-  - neoteroi.timeline
+  - abbr
+  - toc:
+      baselevel: 1
+      permalink: true
+      toc_depth: 3
+  - pymdownx.details
 
+not_in_nav: |
+    assets/.*
 plugins:
-  - glightbox
   - search
-  - literate-nav:
-      nav_file: summary.md
+  # - literate-nav:         // For more advanced site layout
+  #     nav_file: summary.md
+  - tags: null
+  - git-authors
   - git-revision-date-localized:
       enable_creation_date: true
-
+  - macros:
+      include_dir: docs/assets
 extra_css:
-  - assets/css/neoteroi-mkdocs.css
   - assets/css/footer.css
-  # - assets/css/my.css
+extra_javascript: []
