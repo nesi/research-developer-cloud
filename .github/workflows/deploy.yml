@@ -23,6 +23,7 @@ jobs:
         with:
           key: mkdocs-material-${{ env.cache_id }}
           path: .cache
+          fetch-depth: 0
           restore-keys: |
             mkdocs-material-
       - run: mkdocs gh-deploy $(if ${INPUTS_DRYRUN};then echo "-b gh-pages-test --verbose";fi) --force
