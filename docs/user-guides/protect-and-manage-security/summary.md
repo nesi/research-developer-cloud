@@ -3,5 +3,4 @@
     * [Security Policy](security-policy.md)
     * [Security Practices: Infrastructure](security-practices-infrastructure.md)
 * Shared Responsibility
-    * [What is it?](shared-responsibility-what-is-it.md)
-* *
+    * [Shared Responsibility - What is it?](shared-responsibility.md)
