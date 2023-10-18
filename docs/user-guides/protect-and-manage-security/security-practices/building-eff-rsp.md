@@ -50,10 +50,10 @@ You need executive buy in and support prior to rolling these programs out to res
 
 `Resources`
 
-[2018 IT Risk Report, Netwrix](https://www.netwrix.com/2018itrisksreport.html)
-[Backblaze Hard Drive Stats Q3 2023](https://www.backblaze.com/blog/backblaze-drive-stats-for-q3-2022/)
-[Gov UK Education Cybersecurity breaches](https://www.gov.uk/government/statistics/cyber-security-breaches-survey-2023/cyber-security-breaches-survey-2023-education-institutions-annex)
-[Data Breach Numbers](https://www.govtech.com/blogs/lohrmann-on-cybersecurity/data-breach-numbers-costs-and-impacts-all-rise-in-2021)
+- [2018 IT Risk Report, Netwrix](https://www.netwrix.com/2018itrisksreport.html)
+- [Backblaze Hard Drive Stats Q3 2023](https://www.backblaze.com/blog/backblaze-drive-stats-for-q3-2022/)
+- [Gov UK Education Cybersecurity breaches](https://www.gov.uk/government/statistics/cyber-security-breaches-survey-2023/cyber-security-breaches-survey-2023-education-institutions-annex)
+- [Data Breach Numbers](https://www.govtech.com/blogs/lohrmann-on-cybersecurity/data-breach-numbers-costs-and-impacts-all-rise-in-2021)
 
 
 ##

@@ -1,5 +1,3 @@
 * [Security Practices](index.md)
-    * [Building Effective and Efficient Research Security Programs](building-eff-rsp.md)
-* Terms
-    * [General Terms](terms.md)
-* */
+* [Building Effective and Efficient Research Security Programs](building-eff-rsp.md)
+* [Security Terms](security-terms.md)

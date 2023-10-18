@@ -4,9 +4,9 @@ label_names:
 - security
 - terms
 position: 1
-title: Terms
+title: Security Terms
 ---
 
-## Terms
+## Security Terms
 
 Adding Terms Soon!

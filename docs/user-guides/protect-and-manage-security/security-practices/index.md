@@ -10,6 +10,6 @@ vote_sum: 1
 
 We are sharing what NeSI and our community members have learned and want to make available.
 
-- [Terms](terms.md)
 - [Building Effective and Efficient Research Security Programs](building-eff-rsp.md)
+- [Security Terms](security-terms.md)
 
