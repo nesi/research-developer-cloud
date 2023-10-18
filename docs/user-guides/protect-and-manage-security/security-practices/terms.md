@@ -7,3 +7,5 @@ title: Terms
 ---
 
 ## Terms
+
+Adding Terms Soon!
