@@ -3,10 +3,10 @@ hidden: false
 label_names:
 - security
 position: 1
-title: Security Practices
+title: Building Effective and Efficient Research Security Programs
 ---
 
-## Security Practices
+## Geting Started
 
 A broad approach to building effective and research security programs
 
