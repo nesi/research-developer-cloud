@@ -9,3 +9,4 @@
     * [Risizing an Instance](resizing-an-Instance-via-cli.md)
 * Other Tools
     * [Deploy with Terraform](deployment-of-an-instance-with-terraform.md)
+* [Default user for images](default-user-nesi-images.md)
