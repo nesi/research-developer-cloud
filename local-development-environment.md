@@ -11,7 +11,7 @@ python3 -m pip install mkdocs
 
 Install theme and addons
 ```sh
-pip install mkdocs-material mkdocs-glightbox mkdocs-literate-nav neoteroi-mkdocs
+pip install mkdocs-material mkdocs-glightbox mkdocs-literate-nav neoteroi-mkdocs mkdocs-git-revision-date-localized-plugin
 ```
 
 Once the above items are installed you can then serve the files locally with the below command ensuring you are in the root of the repo
