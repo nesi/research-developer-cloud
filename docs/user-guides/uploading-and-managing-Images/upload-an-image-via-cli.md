@@ -16,7 +16,7 @@ vote_sum: 1
 
 To upload an image to FlexiHPC we will be using the command `openstack image create` to upload the image.
 
-Using Ubuntu as an example, we will upload a new Ubuntu 22.10 (kinetic) image. Heading to the Ubuntu cloud images [link](https://cloud-images.ubuntu.com/kinetic/current/) for Kinetic images we want to select the image that ends with `amd64-disk-kvm.img` 
+Using Ubuntu as an example, we will upload a new Ubuntu 22.10 (kinetic) image. Heading to the Ubuntu cloud images [link](https://cloud-images.ubuntu.com/kinetic/current/) for Kinetic images we want to select the image that has the description `QCow2 UEFI/GPT Bootable disk image with linux-kvm KVM optimised kernel` 
 
 With that download and accessible from your CLI we can upload it to FlexiHPC
 
@@ -78,4 +78,8 @@ The command window will process silently as it uploads it to the FlexiHPC platfo
 +------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ```
 
+!!! note
+    Adding `--wait` to the end of the command will give you a progress bar rather then returning with the status `queued`
+
 We should then be able to use the `id` returned to launch an instance from either the [Dashboard](../launch-and-mange-instances/launch-an-instance-via-dashboard.md) or the [CLI](../launch-and-mange-instances/launch-an-instance-via-cli.md)
+
