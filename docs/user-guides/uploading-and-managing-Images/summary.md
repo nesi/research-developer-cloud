@@ -5,4 +5,5 @@
 * With the CLI
     * [Upload Image](upload-an-image-via-cli.md)
     * [Managing Images](managing-images-via-cli.md)
+* [Converting Images](converting_image-types.md)
 * [Image Visibility Types](image-filter.md)
