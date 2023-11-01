@@ -5,6 +5,8 @@ label_names:
 title: Shared Responsibility Model
 ---
 
+# Shared Responsibility - What is it?
+
 ## Establishing a Shared Responsibility Model
 
 The way we work together on this platform is captured within a Shared Responsibility model. Shared Responsibility emphasises the kaitiakitanga, the collaboration, and the coordination essential to its maintenance and to protect the research communities it enables. 
