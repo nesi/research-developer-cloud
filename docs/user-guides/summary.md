@@ -4,5 +4,6 @@
 * [Volumes: Create and Manage](create-and-manage-volumes/)
 * [Networks: Create and Manage](create-and-manage-networks/)
 * [Identity: Create and Manage](create-and-manage-identity/)
+* [Keypairs: Create and Manage](create-and-manage-keypairs/)
 * [Set up your CLI environment](setting-up-your-CLI-environment/)
 * */

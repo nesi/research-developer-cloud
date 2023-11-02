@@ -9,4 +9,5 @@
     * [Risizing an Instance](resizing-an-Instance-via-cli.md)
 * Other Tools
     * [Deploy with Terraform](deployment-of-an-instance-with-terraform.md)
+* [Connecting to your instance with SSH](connect-to-instance-ssh.md)
 * [Default user for images](default-user-nesi-images.md)
