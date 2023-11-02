@@ -18,3 +18,5 @@ You are able to create a new SSH Key pair on the RDC or import one of your own.
 Key pairs can be managed a few ways
 
 - [Create and manage key pairs via the dashboard](create-and-manage-keypairs-with-the-dashboard.md)
+
+- [Create and manage key pairs via CLI](create-and-manage-keypairs-via-cli.md)
