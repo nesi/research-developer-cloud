@@ -23,7 +23,7 @@ Before you can launch an instance via the CLI, gather the following parameters:
 
 - Access and security credentials, which include one or both of the following credentials:
 
-    - A `key pair` for your instance, which are SSH credentials that are injected into images when they are launched. Create at least one key pair for each project. If you already have generated a key pair with an external tool, you can import it into OpenStack. You can use the key pair for multiple instances that belong to that project. Reading Creating and Importing Key Pairs if you would like to know more.
+    - A `key pair` for your instance, which are SSH credentials that are injected into images when they are launched. Create at least one key pair for each project. If you already have generated a key pair with an external tool, you can import it into OpenStack. You can use the key pair for multiple instances that belong to that project. Read [Create and Manage Key Pairs](../create-and-manage-keypairs/index.md) if you would like to know more.
 
     - A `security group` that defines which incoming network traffic is forwarded to instances. Security groups hold a set of firewall policies, known as security group rules.
 
