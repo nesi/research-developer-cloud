@@ -21,7 +21,7 @@ This is the most user friendly way to get up and running as its all done via the
 
 This is a more advance way of interacting with the FlexiHPC platform. It requires some environment setup however it gives you the most control over the your project within the platform.
 
-After reading one of the above you should be able to connect to the instance using ssh.
+After reading one of the above you should be able to connect to the instance using ssh by following [Connecting to your instance with SSH](connect-to-instance-ssh.md)
 
 ## Resizing an Instance
 
