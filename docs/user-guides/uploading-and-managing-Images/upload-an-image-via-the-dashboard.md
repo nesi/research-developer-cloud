@@ -10,9 +10,6 @@ vote_count: 1
 vote_sum: 1
 ---
 
-!!! warning
-    Currently there is a bug with the Dashboard where you are unable to upload new images. This is being looked into and will be resolved soon. If you require a different image then you can still [Upload an Image via CLI](upload-an-image-via-cli.md)
-
 Log into the [NeSI FlexiHPC Dashboard](https://dashboard.cloud.nesi.org.nz/)
 
 Select the project you would like to deploy the new instance too (Use the project selector on the top left-hand side):
