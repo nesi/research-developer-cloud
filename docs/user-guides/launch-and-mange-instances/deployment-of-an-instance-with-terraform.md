@@ -125,3 +125,56 @@ resource "openstack_compute_floatingip_associate_v2" "floating_ip_association" {
   instance_id = openstack_compute_instance_v2.compute_instance.id
 }
 ```
+
+## Using FlexiHPC object storage to store the Terraform state file
+
+Should you wish to not include the terraform state file within the git repo then you will want to update the above with a the backend that you wish to store that file
+
+Within the first chunk of the file you want to add the following so it looks like this
+
+``` hcl
+terraform {
+required_version = ">= 0.14.0"
+  required_providers {
+    openstack = {
+      source  = "terraform-provider-openstack/openstack"
+      version = "~> 1.51.1"
+    }
+  }
+
+  backend "s3" {
+    bucket = "<CONTAINER_NAME>"
+    key    = "state/terraform.tfstate"
+    endpoint   = "https://object.akl-1.cloud.nesi.org.nz/"
+    sts_endpoint = "https://object.akl-1.cloud.nesi.org.nz/"
+    access_key = "<EC2 User Access Token>"
+    secret_key = "<EC2 User Secret Token>"
+    #region = "us-east-1"
+    force_path_style = "true"
+    skip_credentials_validation = "true"
+  }
+}
+```
+
+We have added the `backend "s3"` chunk to the `terraform` block
+
+`<CONTAINER_NAME>`
+:   The container name within FlexiHPC object storage. You can create this either via the [dashboard](../create-and-manage-object-storage/create-and-manage-object-storage-with-the-dashboard.md) or [CLI](../create-and-manage-object-storage/create-and-manage-object-storage-via-cli.md)
+
+You will need to update the following after generating [EC2 Credentials](../create-and-manage-identity/index.md)
+
+`<EC2 User Access Token>`
+:   The EC2 Credentials Access Token
+
+`<EC2 User Secret Token>`
+:   The EC2 Credentials User Secret
+
+Save that file and run
+
+``` { .sh }
+terraform init -reconfigure
+```
+
+This will reconfigure the backend to store the state file on FlexiHPC, you can also pass `-migrate-state` instead of `-reconfigure` should you have a state file that you want to move there from a previous run.
+
+Your terraform state file should now be configured and stored on FlexiHPC object storage

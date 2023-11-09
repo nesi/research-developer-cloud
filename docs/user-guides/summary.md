@@ -5,5 +5,6 @@
 * [Networks: Create and Manage](create-and-manage-networks/)
 * [Identity: Create and Manage](create-and-manage-identity/)
 * [Keypairs: Create and Manage](create-and-manage-keypairs/)
+* [Object Storage: Create and Manage](create-and-manage-object-storage/)
 * [Set up your CLI environment](setting-up-your-CLI-environment/)
 * */
