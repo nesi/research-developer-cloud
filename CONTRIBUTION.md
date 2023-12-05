@@ -5,7 +5,7 @@ Thanks for contributing to our FlexiHPC User guides repository. Below are ways y
 The easiest way for you to help us is by raising an issue, which will require a GitHub account. For amendments to the documentation, you will need to be familiar with general Git concepts if you'd like to commit substantial changes or even whole new user guides, you will be required to set up the preview environment.
 
 ## Raise an issue
-The easiest way to help improve our user guides is by raising an issue in our repository at https://github.com/nesi/flexi-docs.
+The easiest way to help improve our user guides is by raising an issue in our repository at https://github.com/nesi/research-developer-cloud
 
 If you find an issues that needs to be resolved, please have a look through the list of existing issues to see whether your issues hasn't already been reported. If it has, or a closely related issues exists, please add your comments to the existing issue.
 
