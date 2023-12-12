@@ -1,7 +1,7 @@
 ## Accessing object storage with Cyberduck
 
 !!! note
-    You will need [EC2 credentials](../create-and-manage-identity/index.md) to use Cyberduck
+    You will need [EC2 credentials](creating-and-managing-ec2-credentials-via-cli.md) to use Cyberduck
 
 Cyberduck is a libre server and cloud storage browser for Mac and Windows with support for FTP, SFTP, WebDAV, Amazon S3, OpenStack Swift, Backblaze B2, Microsoft Azure & OneDrive, Google Drive and Dropbox.
 

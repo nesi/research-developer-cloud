@@ -30,8 +30,8 @@ the default branch may be called "main" instead of "master".
 ```sh
 cd DIRECTORY_NAME
 git fetch upstream
-git checkout master
-git rebase upstream/master
+git checkout main
+git rebase upstream/main
 ```
 
 Create your new branch.
@@ -57,7 +57,7 @@ following commands to keep it in sync:
 
 ```sh
 git fetch upstream
-git rebase upstream/master
+git rebase upstream/main
 ```
 
 Please don't use `git pull` instead of the above `fetch` and
