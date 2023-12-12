@@ -21,9 +21,12 @@ There are a few ways to create and mange object storage within FlexiHPC
 - [Creating and Managing object storage via the Dashboard](create-and-manage-object-storage-with-the-dashboard.md)
 
 - [Creating and Managing object storage via CLI](create-and-manage-object-storage-via-cli.md)
- 
 
-Interacting with the FlexiHPC Object storage can be done a few ways outside of the dashboard. 
+If you are looking to interact with the s3 Protocol then you need to also generate yourself some EC2 credentials
+
+- [Creating and Managing EC2 credentials](creating-and-managing-ec2-credentials-via-cli.md)
+
+Interacting with the FlexiHPC Object storage can be done a few ways outside of the dashboard.
 
 - [Interacting with the S3 protocol with Boto3](using-boto3-to-interact-with-object-storage.md)
 

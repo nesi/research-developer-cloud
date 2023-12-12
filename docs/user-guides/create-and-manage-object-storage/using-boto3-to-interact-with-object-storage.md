@@ -1,7 +1,7 @@
 ## Interacting with the S3 protocol with Boto3
 
 !!! note
-    Prior to starting this you will need to have read [Setting up your CLI environment](../setting-up-your-CLI-environment/index.md) and ran the commands to generate [EC2 Credentials](../create-and-manage-identity/index.md)
+    Prior to starting this you will need to have read [Setting up your CLI environment](../setting-up-your-CLI-environment/index.md) and ran the commands to generate [EC2 Credentials](creating-and-managing-ec2-credentials-via-cli.md)
 
     Boto3 documentation can be found [here](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html)
 
