@@ -16,8 +16,6 @@ When resizing an instance via the CLI there are few details you will need, the `
 
 Run the following command to return a list of servers within your project space
 
-Run the following command to return a list of servers within your project space
-
 ```
 openstack server list
 ```
