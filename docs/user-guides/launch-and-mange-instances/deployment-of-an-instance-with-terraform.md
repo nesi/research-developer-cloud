@@ -8,7 +8,11 @@ position: 10
 ---
 
 !!! note
-    You will need to have Terraform installed on the machine that will be executing the commands. Follow the [Install Terraform](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli) link from the official documentation.
+    You will need to have Terraform installed on the machine that will be executing the commands. Follow the [Install Terraform](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli) link from the official documentation. We also highly recommend that you use [Application Credentials](../create-and-manage-identity/creating-and-managing-application-credentials-with-the-dashboard.md) to do any automation
+
+Please make sure you have download the `clouds.yaml` file for your application credentials and its sitting in the directory `~/.config/openstack/`
+
+Generating Application Credentials is covered [here](../create-and-manage-identity/creating-and-managing-application-credentials-with-the-dashboard.md)
 
 Normally creating a folder space for Terraform projects can be a good thing as this ensures the Terraform state file doesn't clash with another.
 
@@ -18,15 +22,35 @@ Inside this file we will need to define the provider
 
 ``` hcl
 provider "openstack" {
-  auth_url    = "https://keystone.akl-1.cloud.nesi.org.nz/v3"
-  user_name   = "FLEXIHPC_USERNAME"
-  password    = "FLEXIHPC_PASSWORD"
-  project_id  = "FLEXIHPC_PROJECT_NAME"
-  region      = "akl-1"
+  cloud = "NAME_IN_CLOUDS_YAML"
 }
 ```
 
-Replace the placeholders `FLEXIHPC_USERNAME`, `FLEXIHPC_PASSWORD` and `FLEXIHPC_PROJECT_NAME` with your actual OpenStack authentication details.
+Replace the placeholder `NAME_IN_CLOUDS_YAML` with the name of your openstack section in the clouds.yaml file. An example `clouds.yaml` with multiple entries looks like the following:
+
+``` { .yaml .no-copy }
+clouds:
+  openstack-entry-1:
+    auth:
+      auth_url: https://keystone.akl-1.cloud.nesi.org.nz
+      application_credential_id: "APP_CREDS_ID"
+      application_credential_secret: "APP_CREDS_SECRET"
+    interface: "public"
+    identity_api_version: 3
+    auth_type: "v3applicationcredential"
+    verify: false
+  openstack-entry-2:
+    auth:
+      auth_url: https://keystone.akl-1.cloud.nesi.org.nz
+      application_credential_id: "APP_CREDS_ID"
+      application_credential_secret: "APP_CREDS_SECRET"
+    region_name: "akl-1"
+    interface: "public"
+    identity_api_version: 3
+    auth_type: "v3applicationcredential"
+    verify: false
+```
+You will want to be using the name `openstack-entry-X` as your the value in `NAME_IN_CLOUDS_YAML`
 
 Then within the same file we want to define the compute instance
 
@@ -97,11 +121,7 @@ required_version = ">= 0.14.0"
 }
 
 provider "openstack" {
-  auth_url    = "https://keystone.akl-1.cloud.nesi.org.nz/v3"
-  user_name   = "FLEXIHPC_USERNAME"
-  password    = "FLEXIHPC_PASSWORD"
-  project_id  = "FLEXIHPC_PROJECT_NAME"
-  region      = "akl-1"
+  cloud = "NAME_IN_CLOUDS_YAML"
 }
 
 resource "openstack_compute_instance_v2" "compute_instance" {
