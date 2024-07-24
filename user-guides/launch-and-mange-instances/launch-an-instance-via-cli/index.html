@@ -1,0 +1,3242 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../manage-security-groups-of-an-Instance-via-the-dashboard/">
+      
+      
+        <link rel="next" href="../launch-an-instance-from-an-image/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.30">
+    
+    
+      
+        <title>Launch an Instance via CLI - Research Developer Cloud</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.3cba04c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/css/neoteroi-mkdocs.css">
+    
+      <link rel="stylesheet" href="../../../assets/css/footer.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#gather-parameters-to-launch-an-instance" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Research Developer Cloud" class="md-header__button md-logo" aria-label="Research Developer Cloud" data-md-component="logo">
+      
+  <img src="../../../assets/images/nesi-logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Research Developer Cloud
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Launch an Instance via CLI
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="white" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/nesi/research-developer-cloud" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    nesi/research-developer-cloud
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+    
+  
+  User Guides
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../security/" class="md-tabs__link">
+          
+  
+    
+  
+  Security
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../release-notes/20240205-research-developer-cloud-updates-v0.11/" class="md-tabs__link">
+          
+  
+    
+  
+  Release notes
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Research Developer Cloud" class="md-nav__button md-logo" aria-label="Research Developer Cloud" data-md-component="logo">
+      
+  <img src="../../../assets/images/nesi-logo.png" alt="logo">
+
+    </a>
+    Research Developer Cloud
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/nesi/research-developer-cloud" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    nesi/research-developer-cloud
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    User Guides
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            User Guides
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Compute: Create and Manage
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Compute: Create and Manage
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_2" id="__nav_2_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    With the Dashboard
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            With the Dashboard
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../launch-an-instance-via-dashboard/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Launch an Instance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../resizing-an-Instance-via-the-dashboard/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Resizing an Instance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../manage-security-groups-of-an-Instance-via-the-dashboard/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Manage Security Groups of an Instance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_3" id="__nav_2_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    With the CLI
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            With the CLI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Gather details to launch an Instance
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Gather details to launch an Instance
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#gather-parameters-to-launch-an-instance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gather parameters to launch an instance
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#launch-an-instance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Launch an instance
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../launch-an-instance-from-an-image/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Launch an Instance from an Image
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../launch-an-instance-from-a-volume/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Launch an Instance from a Volume
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../resizing-an-Instance-via-cli/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Risizing an Instance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../manage-security-groups-of-an-Instance-via-the-cli/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Manage Security Groups of an Instance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_4" id="__nav_2_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Other Tools
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Other Tools
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deployment-of-an-instance-with-terraform/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Deploy with Terraform
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connect-to-instance-ssh/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Connecting to your instance with SSH
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../default-user-nesi-images/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Default user for images
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../uploading-and-managing-Images/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Images: Upload and Manage
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Images: Upload and Manage
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3_2" id="__nav_2_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    With the Dashboard
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            With the Dashboard
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../uploading-and-managing-Images/upload-an-image-via-the-dashboard/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Upload Image
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../uploading-and-managing-Images/managing-images-via-the-dashboard/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Managing Images
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3_3" id="__nav_2_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    With the CLI
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            With the CLI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../uploading-and-managing-Images/upload-an-image-via-cli/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Upload Image
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../uploading-and-managing-Images/managing-images-via-cli/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Managing Images
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../uploading-and-managing-Images/converting_image-types/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Converting Images
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../uploading-and-managing-Images/image-filter/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Image Visibility Types
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../create-and-manage-volumes/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Volumes: Create and Manage
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Volumes: Create and Manage
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4_2" id="__nav_2_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    With the Dashboard
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            With the Dashboard
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../create-and-manage-volumes/create-and-manage-volumes-with-the-dashboard/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create and Manage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4_3" id="__nav_2_4_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    With the CLI
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            With the CLI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../create-and-manage-volumes/create-and-manage-volumes-via-cli/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create and Manage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../create-and-manage-volumes/format-and-mount-volumes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Format and Mount Volume
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../create-and-manage-networks/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Networks: Create and Manage
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            Networks: Create and Manage
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5_2" id="__nav_2_5_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    With the Dashboard
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            With the Dashboard
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../create-and-manage-networks/create-and-manage-networks-with-the-dashboard/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Networks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../create-and-manage-networks/manage-security-groups-with-the-dashboard/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Security Groups
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../create-and-manage-networks/create-and-manage-network-ports-with-the-dashboard/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Network Ports
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../create-and-manage-networks/manage-floating-ips-via-the-dashboard/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Floating IPs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5_3" id="__nav_2_5_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    With the CLI
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            With the CLI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../create-and-manage-networks/create-and-manage-networks-via-cli/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Networks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../create-and-manage-networks/manage-security-groups-via-cli/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Security Groups
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../create-and-manage-networks/create-and-manage-network-ports-via-cli/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Network Ports
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../create-and-manage-networks/manage-floating-ips-via-cli/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Floating IPs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../create-and-manage-identity/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Identity: Create and Manage
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            Identity: Create and Manage
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6_2" id="__nav_2_6_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    With the Dashboard
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            With the Dashboard
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../create-and-manage-identity/creating-and-managing-application-credentials-with-the-dashboard/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create and Manage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6_3" id="__nav_2_6_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    With the CLI
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            With the CLI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../create-and-manage-identity/creating-and-managing-application-credentials-via-cli/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create and Manage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../create-and-manage-keypairs/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Keypairs: Create and Manage
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7">
+            <span class="md-nav__icon md-icon"></span>
+            Keypairs: Create and Manage
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_7_2" id="__nav_2_7_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    With the Dashboard
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_7_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7_2">
+            <span class="md-nav__icon md-icon"></span>
+            With the Dashboard
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../create-and-manage-keypairs/create-and-manage-keypairs-with-the-dashboard/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create and Manage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_7_3" id="__nav_2_7_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    With the CLI
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_7_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7_3">
+            <span class="md-nav__icon md-icon"></span>
+            With the CLI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../create-and-manage-keypairs/create-and-manage-keypairs-via-cli/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create and Manage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../create-and-manage-object-storage/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Object Storage: Create and Manage
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_8" id="__nav_2_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8">
+            <span class="md-nav__icon md-icon"></span>
+            Object Storage: Create and Manage
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_8_2" id="__nav_2_8_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    With the Dashboard
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_8_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8_2">
+            <span class="md-nav__icon md-icon"></span>
+            With the Dashboard
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../create-and-manage-object-storage/create-and-manage-object-storage-with-the-dashboard/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create and Manage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_8_3" id="__nav_2_8_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    With the CLI
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_8_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8_3">
+            <span class="md-nav__icon md-icon"></span>
+            With the CLI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../create-and-manage-object-storage/create-and-manage-object-storage-via-cli/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create and Manage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../create-and-manage-object-storage/creating-and-managing-ec2-credentials-via-cli/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creating and Managing EC2 credentials
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../create-and-manage-object-storage/using-boto3-to-interact-with-object-storage/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Interacting with the S3 protocol with Boto3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../create-and-manage-object-storage/using-cyberduck-to-interact-with-object-storage/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Accessing object storage with Cyberduck
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../setting-up-your-CLI-environment/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Set up your CLI environment
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_9">
+            <span class="md-nav__icon md-icon"></span>
+            Set up your CLI environment
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../security/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Security
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Security
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../security/security-policy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Security Policy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../security/security-practices/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Security Practices
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Security Practices
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../security/security-practices/building-eff-rsp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Building Effective and Efficient Research Security Programs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../security/shared-responsibility/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Shared Responsibility
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../security/terms/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    General Terms
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Release notes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Release notes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../release-notes/20240205-research-developer-cloud-updates-v0.11/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Research Developer Cloud updates v0.11 - 20240205
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../release-notes/20231205-research-developer-cloud-updates-and-fixes-v0.10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Research Developer Cloud updates and fixes v0.10 - 20231205
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../release-notes/20230918-essential-building-blocks-v0.9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Essential building blocks v0.9 - 20230918 NZRSE23
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#gather-parameters-to-launch-an-instance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gather parameters to launch an instance
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#launch-an-instance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Launch an instance
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+  <h1>Gather details to launch an Instance</h1>
+
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The openstack CLI will need to be setup to interact with the FlexiHPC system. Please read <a href="../../setting-up-your-CLI-environment/">Setting up your CLI environment</a> to interact with FlexiHPC to get started.</p>
+</div>
+<p>Before you can launch an instance via the CLI, gather the following parameters:</p>
+<ul>
+<li>
+<p>The <code>instance source</code> can be an image, snapshot, or block storage volume that contains an image or snapshot.</p>
+</li>
+<li>
+<p>A <code>name</code> for your instance.</p>
+</li>
+<li>
+<p>The <code>flavor</code> for your instance, which defines the compute, memory, and storage capacity of nova computing instances. A flavor is an available hardware configuration for a server. It defines the size of a virtual server that can be launched.</p>
+</li>
+<li>
+<p>Access and security credentials, which include one or both of the following credentials:</p>
+<ul>
+<li>
+<p>A <code>key pair</code> for your instance, which are SSH credentials that are injected into images when they are launched. Create at least one key pair for each project. If you already have generated a key pair with an external tool, you can import it into OpenStack. You can use the key pair for multiple instances that belong to that project. Read <a href="../../create-and-manage-keypairs/">Create and Manage Key Pairs</a> if you would like to know more.</p>
+</li>
+<li>
+<p>A <code>security group</code> that defines which incoming network traffic is forwarded to instances. Security groups hold a set of firewall policies, known as security group rules.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>The <code>network</code> to attach the instance too.</p>
+</li>
+<li>
+<p>If needed, you can assign a <strong>floating (public) IP address</strong> to a running instance to make it accessible from outside the cloud.</p>
+</li>
+<li>
+<p>You can also attach a block storage device, or <strong>volume</strong>, for persistent storage.</p>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Instances that use the default security group cannot, by default, be accessed from any IP address outside of the cloud. If you want those IP addresses to access the instances, you must modify the rules for the security group. Read How to add/update and remove security groups for more information.</p>
+</div>
+<p>After you gather the parameters that you need to launch an instance, you can launch it from an image or a volume.</p>
+<h2 id="gather-parameters-to-launch-an-instance">Gather parameters to launch an instance</h2>
+<p>List the available flavors.</p>
+<div class="language-sh copy highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>openstack<span class="w"> </span>flavor<span class="w"> </span>list
+</span></code></pre></div>
+<p>Note the ID of the flavor that you want to use for your instance:</p>
+<div class="language-sh no-copy highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>+--------------------------------------+-------------------------+--------+------+-----------+-------+-----------+
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="p">|</span><span class="w"> </span>ID<span class="w">                                   </span><span class="p">|</span><span class="w"> </span>Name<span class="w">                    </span><span class="p">|</span><span class="w">    </span>RAM<span class="w"> </span><span class="p">|</span><span class="w"> </span>Disk<span class="w"> </span><span class="p">|</span><span class="w"> </span>Ephemeral<span class="w"> </span><span class="p">|</span><span class="w"> </span>VCPUs<span class="w"> </span><span class="p">|</span><span class="w"> </span>Is<span class="w"> </span>Public<span class="w"> </span><span class="p">|</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>+--------------------------------------+-------------------------+--------+------+-----------+-------+-----------+
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="p">|</span><span class="w"> </span>0f71f1e2-d327-41f9-87e3-0f6c29f51af1<span class="w"> </span><span class="p">|</span><span class="w"> </span>gb.bm.gpu<span class="w">               </span><span class="p">|</span><span class="w"> </span><span class="m">524288</span><span class="w"> </span><span class="p">|</span><span class="w">  </span><span class="m">240</span><span class="w"> </span><span class="p">|</span><span class="w">         </span><span class="m">0</span><span class="w"> </span><span class="p">|</span><span class="w">    </span><span class="m">48</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>True<span class="w">      </span><span class="p">|</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="p">|</span><span class="w"> </span>1281555c-6bcb-42e4-a48e-98352dcd0fd0<span class="w"> </span><span class="p">|</span><span class="w"> </span>compute1.2cpu4ram<span class="w">       </span><span class="p">|</span><span class="w">   </span><span class="m">4096</span><span class="w"> </span><span class="p">|</span><span class="w">   </span><span class="m">30</span><span class="w"> </span><span class="p">|</span><span class="w">         </span><span class="m">0</span><span class="w"> </span><span class="p">|</span><span class="w">     </span><span class="m">2</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>True<span class="w">      </span><span class="p">|</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="p">|</span><span class="w"> </span>14505c86-765f-4971-a36f-1e867216dccf<span class="w"> </span><span class="p">|</span><span class="w"> </span>memory1.4cpu16ram<span class="w">       </span><span class="p">|</span><span class="w">  </span><span class="m">16384</span><span class="w"> </span><span class="p">|</span><span class="w">   </span><span class="m">30</span><span class="w"> </span><span class="p">|</span><span class="w">         </span><span class="m">0</span><span class="w"> </span><span class="p">|</span><span class="w">     </span><span class="m">4</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>True<span class="w">      </span><span class="p">|</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="p">|</span><span class="w"> </span>1dbac08-d9a9-4c27-8534-57293785433e<span class="w">  </span><span class="p">|</span><span class="w"> </span>balanced1.32cpu64ram<span class="w">    </span><span class="p">|</span><span class="w">  </span><span class="m">65536</span><span class="w"> </span><span class="p">|</span><span class="w">   </span><span class="m">30</span><span class="w"> </span><span class="p">|</span><span class="w">         </span><span class="m">0</span><span class="w"> </span><span class="p">|</span><span class="w">    </span><span class="m">32</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>True<span class="w">      </span><span class="p">|</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="p">|</span><span class="w"> </span>2d02e6a4-3937-4ed3-951a-8e27867ff53e<span class="w"> </span><span class="p">|</span><span class="w"> </span>balanced1.8cpu16ram<span class="w">     </span><span class="p">|</span><span class="w">  </span><span class="m">16384</span><span class="w"> </span><span class="p">|</span><span class="w">   </span><span class="m">30</span><span class="w"> </span><span class="p">|</span><span class="w">         </span><span class="m">0</span><span class="w"> </span><span class="p">|</span><span class="w">     </span><span class="m">8</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>True<span class="w">      </span><span class="p">|</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="p">|</span><span class="w"> </span>2e7b7cc7-9e29-4ff2-98dd-03dbb99dbb5c<span class="w"> </span><span class="p">|</span><span class="w"> </span>compute1.16cpu32ram<span class="w">     </span><span class="p">|</span><span class="w">  </span><span class="m">32768</span><span class="w"> </span><span class="p">|</span><span class="w">   </span><span class="m">30</span><span class="w"> </span><span class="p">|</span><span class="w">         </span><span class="m">0</span><span class="w"> </span><span class="p">|</span><span class="w">    </span><span class="m">16</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>True<span class="w">      </span><span class="p">|</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="p">|</span><span class="w"> </span>3276cd5f-c96a-4e05-960f-f4f197142c98<span class="w"> </span><span class="p">|</span><span class="w"> </span>memory1.1cpu4ram<span class="w">        </span><span class="p">|</span><span class="w">   </span><span class="m">4096</span><span class="w"> </span><span class="p">|</span><span class="w">   </span><span class="m">30</span><span class="w"> </span><span class="p">|</span><span class="w">         </span><span class="m">0</span><span class="w"> </span><span class="p">|</span><span class="w">     </span><span class="m">1</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>True<span class="w">      </span><span class="p">|</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="p">|</span><span class="w"> </span>3b5a6e01-d3ad-49e3-a4f8-183c04444330<span class="w"> </span><span class="p">|</span><span class="w"> </span>balanced1.1cpu2ram<span class="w">      </span><span class="p">|</span><span class="w">   </span><span class="m">2048</span><span class="w"> </span><span class="p">|</span><span class="w">   </span><span class="m">30</span><span class="w"> </span><span class="p">|</span><span class="w">         </span><span class="m">0</span><span class="w"> </span><span class="p">|</span><span class="w">     </span><span class="m">1</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>True<span class="w">      </span><span class="p">|</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="p">|</span><span class="w"> </span>4a0425c8-7494-473e-a5bb-acc91c378615<span class="w"> </span><span class="p">|</span><span class="w"> </span>c1.cpu128.ram448.disk30<span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="m">458752</span><span class="w"> </span><span class="p">|</span><span class="w">   </span><span class="m">30</span><span class="w"> </span><span class="p">|</span><span class="w">         </span><span class="m">0</span><span class="w"> </span><span class="p">|</span><span class="w">   </span><span class="m">128</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>True<span class="w">      </span><span class="p">|</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="p">|</span><span class="w"> </span>4e8af724-f66d-4072-a692-114126de25a0<span class="w"> </span><span class="p">|</span><span class="w"> </span>compute1.1cpu2ram<span class="w">       </span><span class="p">|</span><span class="w">   </span><span class="m">2048</span><span class="w"> </span><span class="p">|</span><span class="w">   </span><span class="m">30</span><span class="w"> </span><span class="p">|</span><span class="w">         </span><span class="m">0</span><span class="w"> </span><span class="p">|</span><span class="w">     </span><span class="m">1</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>True<span class="w">      </span><span class="p">|</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="p">|</span><span class="w"> </span>4ec785be-a422-4207-9daa-cbb71c61f9ed<span class="w"> </span><span class="p">|</span><span class="w"> </span>devtest1.4cpu4ram<span class="w">       </span><span class="p">|</span><span class="w">   </span><span class="m">4096</span><span class="w"> </span><span class="p">|</span><span class="w">   </span><span class="m">30</span><span class="w"> </span><span class="p">|</span><span class="w">         </span><span class="m">0</span><span class="w"> </span><span class="p">|</span><span class="w">     </span><span class="m">4</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>True<span class="w">      </span><span class="p">|</span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="p">|</span><span class="w"> </span>674fa81a-69c7-4bf7-b3a9-59989fb63618<span class="w"> </span><span class="p">|</span><span class="w"> </span>balanced1.16cpu32ram<span class="w">    </span><span class="p">|</span><span class="w">  </span><span class="m">32768</span><span class="w"> </span><span class="p">|</span><span class="w">   </span><span class="m">30</span><span class="w"> </span><span class="p">|</span><span class="w">         </span><span class="m">0</span><span class="w"> </span><span class="p">|</span><span class="w">    </span><span class="m">16</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>True<span class="w">      </span><span class="p">|</span>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="p">|</span><span class="w"> </span>6b2e76a8-cce0-4175-8160-76e2525d3d3d<span class="w"> </span><span class="p">|</span><span class="w"> </span>balanced1.2cpu4ram<span class="w">      </span><span class="p">|</span><span class="w">   </span><span class="m">4096</span><span class="w"> </span><span class="p">|</span><span class="w">   </span><span class="m">30</span><span class="w"> </span><span class="p">|</span><span class="w">         </span><span class="m">0</span><span class="w"> </span><span class="p">|</span><span class="w">     </span><span class="m">2</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>True<span class="w">      </span><span class="p">|</span>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="p">|</span><span class="w"> </span>7af5c672-43e7-4296-9608-5974394851b8<span class="w"> </span><span class="p">|</span><span class="w"> </span>memory1.2cpu8ram<span class="w">        </span><span class="p">|</span><span class="w">   </span><span class="m">8192</span><span class="w"> </span><span class="p">|</span><span class="w">   </span><span class="m">30</span><span class="w"> </span><span class="p">|</span><span class="w">         </span><span class="m">0</span><span class="w"> </span><span class="p">|</span><span class="w">     </span><span class="m">2</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>True<span class="w">      </span><span class="p">|</span>
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="p">|</span><span class="w"> </span>7ffa092c-e75a-4cb5-be9f-db8c749e8801<span class="w"> </span><span class="p">|</span><span class="w"> </span>compute1.4cpu8ram<span class="w">       </span><span class="p">|</span><span class="w">   </span><span class="m">8192</span><span class="w"> </span><span class="p">|</span><span class="w">   </span><span class="m">30</span><span class="w"> </span><span class="p">|</span><span class="w">         </span><span class="m">0</span><span class="w"> </span><span class="p">|</span><span class="w">     </span><span class="m">4</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>True<span class="w">      </span><span class="p">|</span>
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="p">|</span><span class="w"> </span>8aef7f54-1ed6-4275-a38c-3f1e61afabd9<span class="w"> </span><span class="p">|</span><span class="w"> </span>memory1.16cpu64ram<span class="w">      </span><span class="p">|</span><span class="w">  </span><span class="m">65536</span><span class="w"> </span><span class="p">|</span><span class="w">   </span><span class="m">30</span><span class="w"> </span><span class="p">|</span><span class="w">         </span><span class="m">0</span><span class="w"> </span><span class="p">|</span><span class="w">    </span><span class="m">16</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>True<span class="w">      </span><span class="p">|</span>
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="p">|</span><span class="w"> </span>94ba9177-cb98-4b04-870c-9a696e1c5327<span class="w"> </span><span class="p">|</span><span class="w"> </span>memory1.32cpu128ram<span class="w">     </span><span class="p">|</span><span class="w"> </span><span class="m">131072</span><span class="w"> </span><span class="p">|</span><span class="w">   </span><span class="m">30</span><span class="w"> </span><span class="p">|</span><span class="w">         </span><span class="m">0</span><span class="w"> </span><span class="p">|</span><span class="w">    </span><span class="m">32</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>True<span class="w">      </span><span class="p">|</span>
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="p">|</span><span class="w"> </span>9d536959-dd7a-4532-b0b7-db8bb8a72ddb<span class="w"> </span><span class="p">|</span><span class="w"> </span>compute1.8cpu16ram<span class="w">      </span><span class="p">|</span><span class="w">  </span><span class="m">16384</span><span class="w"> </span><span class="p">|</span><span class="w">   </span><span class="m">30</span><span class="w"> </span><span class="p">|</span><span class="w">         </span><span class="m">0</span><span class="w"> </span><span class="p">|</span><span class="w">     </span><span class="m">8</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>True<span class="w">      </span><span class="p">|</span>
+</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="p">|</span><span class="w"> </span>b46e184c-0dcb-44b2-a53f-c2b8eff676c9<span class="w"> </span><span class="p">|</span><span class="w"> </span>compute1.32cpu64ram<span class="w">     </span><span class="p">|</span><span class="w">  </span><span class="m">65536</span><span class="w"> </span><span class="p">|</span><span class="w">   </span><span class="m">30</span><span class="w"> </span><span class="p">|</span><span class="w">         </span><span class="m">0</span><span class="w"> </span><span class="p">|</span><span class="w">    </span><span class="m">32</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>True<span class="w">      </span><span class="p">|</span>
+</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="p">|</span><span class="w"> </span>d6c2e93a-d430-44ca-822b-79a4b882c0c3<span class="w"> </span><span class="p">|</span><span class="w"> </span>piotr-gpu<span class="w">               </span><span class="p">|</span><span class="w"> </span><span class="m">131072</span><span class="w"> </span><span class="p">|</span><span class="w">  </span><span class="m">100</span><span class="w"> </span><span class="p">|</span><span class="w">         </span><span class="m">0</span><span class="w"> </span><span class="p">|</span><span class="w">     </span><span class="m">8</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>True<span class="w">      </span><span class="p">|</span>
+</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="p">|</span><span class="w"> </span>d6e3a25a-4f9e-4c87-9342-77f807ead537<span class="w"> </span><span class="p">|</span><span class="w"> </span>memory1.8cpu32ram<span class="w">       </span><span class="p">|</span><span class="w">  </span><span class="m">32768</span><span class="w"> </span><span class="p">|</span><span class="w">   </span><span class="m">30</span><span class="w"> </span><span class="p">|</span><span class="w">         </span><span class="m">0</span><span class="w"> </span><span class="p">|</span><span class="w">     </span><span class="m">8</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>True<span class="w">      </span><span class="p">|</span>
+</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="p">|</span><span class="w"> </span>e07cfee1-43af-4bf6-baac-3bdf7c1b88f8<span class="w"> </span><span class="p">|</span><span class="w"> </span>balanced1.4cpu8ram<span class="w">      </span><span class="p">|</span><span class="w">   </span><span class="m">8192</span><span class="w"> </span><span class="p">|</span><span class="w">   </span><span class="m">30</span><span class="w"> </span><span class="p">|</span><span class="w">         </span><span class="m">0</span><span class="w"> </span><span class="p">|</span><span class="w">     </span><span class="m">4</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>True<span class="w">      </span><span class="p">|</span>
+</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a><span class="p">|</span><span class="w"> </span>e3a1ec6d-9513-4b9f-9580-671c4eee1c21<span class="w"> </span><span class="p">|</span><span class="w"> </span>devtest1.2cpu2ram<span class="w">       </span><span class="p">|</span><span class="w">   </span><span class="m">2048</span><span class="w"> </span><span class="p">|</span><span class="w">   </span><span class="m">30</span><span class="w"> </span><span class="p">|</span><span class="w">         </span><span class="m">0</span><span class="w"> </span><span class="p">|</span><span class="w">     </span><span class="m">2</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>True<span class="w">      </span><span class="p">|</span>
+</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a><span class="p">|</span><span class="w"> </span>ee55c523-9803-4296-91be-1c34e986baaa<span class="w"> </span><span class="p">|</span><span class="w"> </span>devtest1.1cpu1ram<span class="w">       </span><span class="p">|</span><span class="w">   </span><span class="m">1024</span><span class="w"> </span><span class="p">|</span><span class="w">   </span><span class="m">30</span><span class="w"> </span><span class="p">|</span><span class="w">         </span><span class="m">0</span><span class="w"> </span><span class="p">|</span><span class="w">     </span><span class="m">1</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>True<span class="w">      </span><span class="p">|</span>
+</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a>+--------------------------------------+-------------------------+--------+------+-----------+-------+-----------+
+</span></code></pre></div>
+<p>List the available images.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>openstack image list
+</span></code></pre></div>
+<p>Note the ID of the image from which you want to boot your instance:</p>
+<div class="language-sh no-copy highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>+--------------------------------------+----------------------------------------------------------+--------+
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="p">|</span><span class="w"> </span>ID<span class="w">                                   </span><span class="p">|</span><span class="w"> </span>Name<span class="w">                                                     </span><span class="p">|</span><span class="w"> </span>Status<span class="w"> </span><span class="p">|</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>+--------------------------------------+----------------------------------------------------------+--------+
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="p">|</span><span class="w"> </span>701e29ac-8963-4cf9-b90a-e1b14095866d<span class="w"> </span><span class="p">|</span><span class="w"> </span>CentOS-Stream-8<span class="w">                                          </span><span class="p">|</span><span class="w"> </span>active<span class="w"> </span><span class="p">|</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="p">|</span><span class="w"> </span>42ebfb1b-f136-4947-ae1a-025ad57b369c<span class="w"> </span><span class="p">|</span><span class="w"> </span>CentOS-stream8-baremetal<span class="w">                                 </span><span class="p">|</span><span class="w"> </span>active<span class="w"> </span><span class="p">|</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="p">|</span><span class="w"> </span>f94a4d02-661f-4df7-bb50-ad08ad89f816<span class="w"> </span><span class="p">|</span><span class="w"> </span>Centos-8.4-AGR<span class="w">                                           </span><span class="p">|</span><span class="w"> </span>active<span class="w"> </span><span class="p">|</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="p">|</span><span class="w"> </span>386c661a-4c30-4f09-b536-511a862102b4<span class="w"> </span><span class="p">|</span><span class="w"> </span>FedoraCoreOS35<span class="w">                                           </span><span class="p">|</span><span class="w"> </span>active<span class="w"> </span><span class="p">|</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="p">|</span><span class="w"> </span>fe8c98d3-7a87-4b5b-9f9e-0f967c53f9bd<span class="w"> </span><span class="p">|</span><span class="w"> </span>FedoraCoreOS37<span class="w">                                           </span><span class="p">|</span><span class="w"> </span>active<span class="w"> </span><span class="p">|</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="p">|</span><span class="w"> </span>622c4f3f-8e62-4c81-8809-69b0a34a28e0<span class="w"> </span><span class="p">|</span><span class="w"> </span>PostgreSQL-Ubuntu-20.04.4<span class="w">                                </span><span class="p">|</span><span class="w"> </span>active<span class="w"> </span><span class="p">|</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="p">|</span><span class="w"> </span>3936d736-e5bb-4024-a361-512fd40413bc<span class="w"> </span><span class="p">|</span><span class="w"> </span>RockyLinux-8.5<span class="w">                                           </span><span class="p">|</span><span class="w"> </span>active<span class="w"> </span><span class="p">|</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="p">|</span><span class="w"> </span>eb40dbb5-7da6-4784-b47c-f417c9d3b126<span class="w"> </span><span class="p">|</span><span class="w"> </span>RockyLinux-8.6<span class="w">                                           </span><span class="p">|</span><span class="w"> </span>active<span class="w"> </span><span class="p">|</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="p">|</span><span class="w"> </span>2b00f364-1bd0-432c-91f9-8d1adda6fc9f<span class="w"> </span><span class="p">|</span><span class="w"> </span>RockyLinux-8.6-OFED-5.7<span class="w">                                  </span><span class="p">|</span><span class="w"> </span>active<span class="w"> </span><span class="p">|</span>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="p">|</span><span class="w"> </span>f366dd3a-5353-47dd-9e92-662055125174<span class="w"> </span><span class="p">|</span><span class="w"> </span>RockyLinux-8.7<span class="w">                                           </span><span class="p">|</span><span class="w"> </span>active<span class="w"> </span><span class="p">|</span>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="p">|</span><span class="w"> </span>b443a9a2-32d1-48c1-8d84-bcc10adbb0c3<span class="w"> </span><span class="p">|</span><span class="w"> </span>RockyLinux-8.7-OFED-5.8<span class="w">                                  </span><span class="p">|</span><span class="w"> </span>active<span class="w"> </span><span class="p">|</span>
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="p">|</span><span class="w"> </span>9933eb25-b0c1-4ef2-b199-25e916c79906<span class="w"> </span><span class="p">|</span><span class="w"> </span>Ubuntu-20-AGR<span class="w">                                            </span><span class="p">|</span><span class="w"> </span>active<span class="w"> </span><span class="p">|</span>
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="p">|</span><span class="w"> </span>ab67f1b1-44f9-4465-9a68-82cc35ed69c0<span class="w"> </span><span class="p">|</span><span class="w"> </span>Ubuntu-Bionic-18.04<span class="w">                                      </span><span class="p">|</span><span class="w"> </span>active<span class="w"> </span><span class="p">|</span>
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="p">|</span><span class="w"> </span>d73ef17b-6b0a-4148-b3b2-f4edcf2e480e<span class="w"> </span><span class="p">|</span><span class="w"> </span>Ubuntu-Focal-20.04<span class="w">                                       </span><span class="p">|</span><span class="w"> </span>active<span class="w"> </span><span class="p">|</span>
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="p">|</span><span class="w"> </span>ce869c9d-35bb-46be-9b6d-d74d4035e2f8<span class="w"> </span><span class="p">|</span><span class="w"> </span>Ubuntu-Focal-20.04-baremetal<span class="w">                             </span><span class="p">|</span><span class="w"> </span>active<span class="w"> </span><span class="p">|</span>
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="p">|</span><span class="w"> </span>885d01da-777b-4e67-a1ec-e114e4c2786e<span class="w"> </span><span class="p">|</span><span class="w"> </span>Ubuntu-Focal-20.04-mark-testing-dib-2022-06-30T12:47:00Z<span class="w"> </span><span class="p">|</span><span class="w"> </span>active<span class="w"> </span><span class="p">|</span>
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="p">|</span><span class="w"> </span>a5c9b7b2-e77b-4094-99ac-db0cf5181da5<span class="w"> </span><span class="p">|</span><span class="w"> </span>Ubuntu-Jammy-22.04<span class="w">                                       </span><span class="p">|</span><span class="w"> </span>active<span class="w"> </span><span class="p">|</span>
+</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a><span class="p">|</span><span class="w"> </span>05f13645-2ac7-44ce-aa1c-64f31ca42761<span class="w"> </span><span class="p">|</span><span class="w"> </span>Ubuntu-Jammy-22.04-DEMOCREDS<span class="w">                             </span><span class="p">|</span><span class="w"> </span>active<span class="w"> </span><span class="p">|</span>
+</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a><span class="p">|</span><span class="w"> </span>c7e208cb-6521-422b-8d00-1b8f003c4646<span class="w"> </span><span class="p">|</span><span class="w"> </span>Ubuntu20.04<span class="w">                                              </span><span class="p">|</span><span class="w"> </span>active<span class="w"> </span><span class="p">|</span>
+</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a><span class="p">|</span><span class="w"> </span>728719c2-0a75-4411-a8fa-3230fa5d50e5<span class="w"> </span><span class="p">|</span><span class="w"> </span>Ubuntu22.04<span class="w">                                              </span><span class="p">|</span><span class="w"> </span>active<span class="w"> </span><span class="p">|</span>
+</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a><span class="p">|</span><span class="w"> </span>a13f3659-eed9-411c-9a33-f1584fd00328<span class="w"> </span><span class="p">|</span><span class="w"> </span>Windows-Server-2012-R2-Eval<span class="w">                              </span><span class="p">|</span><span class="w"> </span>active<span class="w"> </span><span class="p">|</span>
+</span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a><span class="p">|</span><span class="w"> </span>8814f28f-1dbd-4253-84e8-8e45032855c6<span class="w"> </span><span class="p">|</span><span class="w"> </span>Windows-Server-2019<span class="w">                                      </span><span class="p">|</span><span class="w"> </span>active<span class="w"> </span><span class="p">|</span>
+</span><span id="__span-3-26"><a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a><span class="p">|</span><span class="w"> </span>15f3eebe-4c15-4565-a4f8-7369f072b50d<span class="w"> </span><span class="p">|</span><span class="w"> </span>cirros-0.4<span class="w">                                               </span><span class="p">|</span><span class="w"> </span>active<span class="w"> </span><span class="p">|</span>
+</span><span id="__span-3-27"><a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a><span class="p">|</span><span class="w"> </span>534b8b78-f455-4f85-bd21-13c2b1b14e3e<span class="w"> </span><span class="p">|</span><span class="w"> </span>cirros-0.5<span class="w">                                               </span><span class="p">|</span><span class="w"> </span>active<span class="w"> </span><span class="p">|</span>
+</span><span id="__span-3-28"><a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a><span class="p">|</span><span class="w"> </span>04e1a31a-adee-4af2-935e-0e6e7c4b3193<span class="w"> </span><span class="p">|</span><span class="w"> </span>test-break<span class="w">                                               </span><span class="p">|</span><span class="w"> </span>active<span class="w"> </span><span class="p">|</span>
+</span><span id="__span-3-29"><a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a>+--------------------------------------+----------------------------------------------------------+--------+
+</span></code></pre></div>
+<p>List the available security groups.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>openstack security group list
+</span></code></pre></div>
+<p>Note the ID of the security group you want to attach to the instance:</p>
+<div class="language-sh no-copy highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>+--------------------------------------+----------------------------------------------------------------+---------------------------------------------------------+----------------------------------+------+
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="p">|</span><span class="w"> </span>ID<span class="w">                                   </span><span class="p">|</span><span class="w"> </span>Name<span class="w">                                                           </span><span class="p">|</span><span class="w"> </span>Description<span class="w">                                             </span><span class="p">|</span><span class="w"> </span>Project<span class="w">                          </span><span class="p">|</span><span class="w"> </span>Tags<span class="w"> </span><span class="p">|</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>+--------------------------------------+----------------------------------------------------------------+---------------------------------------------------------+----------------------------------+------+
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="p">|</span><span class="w"> </span>7200b28f-9089-4797-a094-39f1995e6f0c<span class="w"> </span><span class="p">|</span><span class="w"> </span>SSH<span class="w"> </span>Allow<span class="w"> </span>All<span class="w">                                                  </span><span class="p">|</span><span class="w"> </span>This<span class="w"> </span>is<span class="w"> </span>an<span class="w"> </span>open<span class="w"> </span>SSH<span class="w"> </span>that<span class="w"> </span>allows<span class="w"> </span>anyone<span class="w"> </span>to<span class="w"> </span>connect<span class="w"> </span>to<span class="w"> </span><span class="m">22</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>4f07cc254d6c4471805d49bae1f739b9<span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="o">[]</span><span class="w">   </span><span class="p">|</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="p">|</span><span class="w"> </span>b24e8bef-969a-4938-8b18-0a33769b181d<span class="w"> </span><span class="p">|</span><span class="w"> </span>kubeapi_whitelist<span class="w">                                              </span><span class="p">|</span><span class="w">                                                         </span><span class="p">|</span><span class="w"> </span>4f07cc254d6c4471805d49bae1f739b9<span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="o">[]</span><span class="w">   </span><span class="p">|</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="p">|</span><span class="w"> </span>b5d30ed4-13b3-4f7a-bc5a-c48175566ea3<span class="w"> </span><span class="p">|</span><span class="w"> </span>My-Security-Group<span class="w">                                              </span><span class="p">|</span><span class="w"> </span>This<span class="w"> </span>is<span class="w"> </span>my<span class="w"> </span>security<span class="w"> </span>group<span class="w">                               </span><span class="p">|</span><span class="w"> </span>4f07cc254d6c4471805d49bae1f739b9<span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="o">[]</span><span class="w">   </span><span class="p">|</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="p">|</span><span class="w"> </span>f2f15d6f-2a04-4196-8102-a058042694b3<span class="w"> </span><span class="p">|</span><span class="w"> </span>default<span class="w">                                                        </span><span class="p">|</span><span class="w"> </span>Default<span class="w"> </span>security<span class="w"> </span>group<span class="w">                                  </span><span class="p">|</span><span class="w"> </span>4f07cc254d6c4471805d49bae1f739b9<span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="o">[]</span><span class="w">   </span><span class="p">|</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>+--------------------------------------+----------------------------------------------------------------+---------------------------------------------------------+----------------------------------+------+
+</span></code></pre></div>
+<p>If you have not created any security groups, you can read How to add/update and remove security groups</p>
+<p>You can view rules for a specified security group:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>openstack security group rule list b5d30ed4-13b3-4f7a-bc5a-c48175566ea3
+</span></code></pre></div>
+<p>List the available key pairs, and note the key pair name that you use for SSH access.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>openstack keypair list
+</span></code></pre></div>
+<p>List the available networks.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>openstack network list
+</span></code></pre></div>
+<p>Note the ID for the network</p>
+<div class="language-sh no-copy highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>+--------------------------------------+--------------------------------+--------------------------------------+
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="p">|</span><span class="w"> </span>ID<span class="w">                                   </span><span class="p">|</span><span class="w"> </span>Name<span class="w">                           </span><span class="p">|</span><span class="w"> </span>Subnets<span class="w">                              </span><span class="p">|</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>+--------------------------------------+--------------------------------+--------------------------------------+
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="p">|</span><span class="w"> </span>33d0c11b-b659-4b77-9afc-5676fe965839<span class="w"> </span><span class="p">|</span><span class="w"> </span>external<span class="w">                       </span><span class="p">|</span><span class="w"> </span>5c2644ad-7253-42f5-ad69-40970b84dea6<span class="w"> </span><span class="p">|</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="p">|</span><span class="w"> </span>d3a7ddb5-6582-42cf-978a-c99b4ed25ad4<span class="w"> </span><span class="p">|</span><span class="w"> </span>NeSI-Training-Test<span class="w">             </span><span class="p">|</span><span class="w"> </span>f5715775-270c-4230-bfa7-fdbdf51352dc<span class="w"> </span><span class="p">|</span>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>+--------------------------------------+--------------------------------+--------------------------------------+
+</span></code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The recommend Network ID to take note of is the network that has the same name as your project. If external access is required then after creating the compute instance a floating ip is the recommend way to gain this external access.</p>
+</div>
+<h2 id="launch-an-instance">Launch an instance</h2>
+<p>You can launch an instance from various sources.</p>
+<ul>
+<li>
+<p><a href="../launch-an-instance-from-an-image/">Launch an instance from an image</a></p>
+</li>
+<li>
+<p><a href="../launch-an-instance-from-a-volume/">Launch an instance from a volume</a></p>
+</li>
+</ul>
+
+
+
+
+
+
+
+  
+    
+  
+  
+    
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 24, 2024</span>
+  </span>
+
+    
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Created">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 24, 2024</span>
+  </span>
+
+    
+    
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+    <div id="new-footer">
+        <div id="partners">
+          <div id="logos">
+            <a href="https://nesi.org.nz" class="nesi-footer-logo" target="_blank"><img alt="" src="https://www.nesi.org.nz/sites/default/files/LogoNeSI-footer.png"></a>
+            <a href="http://www.mbie.govt.nz/" target="_blank"><img alt="" src="https://www.nesi.org.nz/sites/default/files/media/LogoMBIE.png"></a>
+            <a href="https://www.auckland.ac.nz/" target="_blank"><img alt="" src="https://www.nesi.org.nz/sites/default/files/media/LogoUoA.png"></a>
+            <a href="https://www.niwa.co.nz/" target="_blank"><img alt="" src="https://www.nesi.org.nz/sites/default/files/media/LogoNIWA.png"></a>
+            <a href="https://www.otago.ac.nz/" target="_blank"><img alt="" src="https://www.nesi.org.nz/sites/default/files/media/LogoUoO.png"></a>
+            <a href="http://www.landcareresearch.co.nz/" target="_blank"><img alt="" src="https://www.nesi.org.nz/sites/default/files/LogoManaakiWhenuaLandcareResearch.png"></a>
+          </div>
+        </div>
+        <div id="inner">
+          <span id="links"><a href="https://www.nesi.org.nz/copyright" target="_blank">Copyright © <span id="year">2023</span> · New Zealand eScience Infrastructure</a> | <a href="https://www.nesi.org.nz//disclaimer" target="_blank">Disclaimer</a> | <a href="https://www.nesi.org.nz//privacy" target="_blank">Privacy</a>
+          </span>
+        </div>
+    </div>
+</footer>
+
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "navigation.tabs", "navigation.indexes", "navigation.top"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>
