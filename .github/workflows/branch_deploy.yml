@@ -1,6 +1,12 @@
 name: Deploy PR branches
 on: 
   pull_request:
+  workflow_dispatch:
+    inputs:
+      pr-deploy:
+        description: Deploy open merge requests in sub-directories.
+        type: boolean
+        default: true
 env:
   GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   TARGET_REPO: "research-developer-cloud"
