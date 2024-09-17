@@ -1,74 +1,85 @@
 site_name: Documentation Name
 repo_url: https://github.com/example/repository/
+edit_uri: edit/main/docs/
 repo_name: example/repository/
-site_description: Description
+site_description: NeSI Support Documentation
 site_dir: public
-site_url: https://github.com/nesi/support-docs-concept
+site_url: https://docs.nesi.org.nz/
 theme:
   name: material
   custom_dir: overrides
+  favicon: assets/icons/favicon.ico
+  language: en
   logo: assets/icons/logo.svg
   palette:
-    # Palette toggle for light mode
-    - media: "(prefers-color-scheme: light)"
+    - primary: custom
       scheme: default
-      primary: white
       toggle:
-        icon: material/brightness-7
+        icon: material/lightbulb
         name: Switch to dark mode
-    # Palette toggle for dark mode
-    - media: "(prefers-color-scheme: dark)"
+    - primary: custom
       scheme: slate
-      primary: white
       toggle:
-        icon: material/brightness-4
+        icon: material/lightbulb-outline
         name: Switch to light mode
-    
-  favicon: assets/icons/favicon.ico
   features:
-    - content.code.copy
-    - navigation.tabs
     - navigation.indexes
+    - navigation.instant
+    - navigation.instant.prefetch
     - navigation.top
-  language: en
+    - navigation.tracking
+    - navigation.path
+    - content.code.copy
+    - content.action.edit
+    - header.site_name_homepage
 hooks:
-  - custom_hooks.py
+  - mkdocs_hooks.py
 markdown_extensions:
-  - pymdownx.highlight:
-      anchor_linenums: true
-      line_spans: __span
-      pygments_lang_class: true
-  - pymdownx.inlinehilite
-  - pymdownx.snippets:
-      auto_append:
-        - assets/glossary/snippets.md
-  - pymdownx.superfences
-  - attr_list
-  - md_in_html
-  - admonition
-  - pymdownx.tabbed:
-      alternate_style: true
-  - def_list
-  - tables
   - abbr
+  - admonition
+  - attr_list
+  - footnotes
+
   - toc:
       baselevel: 1
       permalink: true
+      title: On this page
       toc_depth: 3
   - pymdownx.details
-
-not_in_nav: |
-    assets/.*
+  - pymdownx.superfences
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.snippets: null
+  - neoteroi.cards
+  - neoteroi.timeline
+extra:
+  analytics:
+    provider: google
+    property: <insert tracking code here>
 plugins:
   - search
-  # - literate-nav:         // For more advanced site layout
-  #     nav_file: summary.md
-  - tags: null
-  - git-authors
+  - open-in-new-tab
+  - redirects:
+      map_file: docs/redirect_map.yml
+  - awesome-pages:
+      filename: .pages.yml
+  - tags:
+      tags: false
   - git-revision-date-localized:
-      enable_creation_date: true
+      enable_creation_date: false
   - macros:
-      include_dir: docs/assets
+      include_dir: overrides
+      module_name: macro_hooks
+      on_error_fail: true
+      verbose: false
 extra_css:
-  - assets/css/footer.css
-extra_javascript: []
+  - assets/stylesheets/neoteroi-mkdocs.css
+  - assets/stylesheets/footer.css
+  - assets/stylesheets/custom_admonations.css
+  - assets/stylesheets/theme.css
+extra_javascript:
+  - assets/javascripts/general.js
+  # Uncomment to include nesi status window.
+  # - https://status.nesi.org.nz/embed/script.js
