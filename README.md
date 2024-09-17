@@ -1,57 +1,40 @@
-# Example README
+# NeSI docs template
 
-## File layout
+Put some infor about the site here.
 
-### docs/
+## Contents
 
-Location of markdown docs. File structure determines categories and sections
+The repository is organised using the following folders:
 
-### docs/assets
+- `checks` : scripts intended to be run by CI,
+- `docs`: markdown files, structure determines categories and sections[^1],
+- `docs/assets`: non-template related files, e.g. images,
+- `overrides`: theme overides or extensions for page templates.
+- `overrides/partials`: Overrides and extensions for sub components.
 
-This is broken down into a few things, treat this as site assets like `css`, `images` or `files(pdfs etc)`
+[^1]: A section or category can be replaced by an `index.md` file, this will replace the default nav with a page.
 
-### docs/base_folder_name
+## Developer Documentation
 
-Subdirectories of docs become categories. If given a index.md, it will have it's own page.
+Following pages contain information to help maintain the documentation:
 
-### summary.md and index
+- See [contributing](https://nesi.github.io/support-docs/CONTRIBUTING) ([local version](docs/CONTRIBUTING.md)), to learn how to you can contribute.
+- See [formatting](https://nesi.github.io/support-docs/FORMAT), for examples of markdown syntax.
+- See [create a new page](https://nesi.github.io/support-docs/NEWPAGE), for general principles to consider when writing pages.
+- See [macros](https://nesi.github.io/support-docs/MACROS), for `mkdocs-macros-plugin` environment.
+- See [checks](checks/README.md), for information on quality assurance tests.
+- See [workflows](.github/workflows/README.md), for information on CI workflows.
 
-These 2 files are used as the following
+## Viewing PR Branches
 
-`index.md` is the base page for that section or group
+![Demo Site](https://github.com/CallumWalley/support-docs-dev/actions/workflows/deploy.yml/badge.svg)
 
-`summary.md` is the nav structure for that section or group, if not supplied then the site will tile all markdown docs out
-
-### overrides/
-
-Theme overides or extensions.
-
-### custom_hooks.py
-
-Custom hooks.
-    - on_env : Injects application info from 'module-list' into jinja build env.
-    - lint -> moved to CI
-    - link_checker -> moved to CI
+Deployments of open pull requests can be viewed at [https://callumwalley.github.io/support-docs-dev/NAME-OF-BRANCH](https://callumwalley.github.io/support-docs-dev/)
 
 ## Theme
 
-https://squidfunk.github.io/mkdocs-material/
+We are using the [mkdocs material theme](https://squidfunk.github.io/mkdocs-material/).
 
-## Contributing
+## Analyics
 
-We welcome contributions to our User Guides. Please read [CONTRIBUTING.md](CONTRIBUTION.md)
-Pages hosted [here](https://cwal219.pages.hpcf.nesi.org.nz/mkdocs).
-
-### Build filters
-
-These are filters that should be run whenever a page is edited.
-
-Currently triggered in CI
-    - proselint
-    - mdspellcheck
-
-Currently Being run through mkdocs:
-    - Spellcheck
-    - Dead link checker
-
-Would be better to run these independently so they can be run by gitlab CI.
+Google Analytics can be set up.
