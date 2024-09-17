@@ -1,6 +1,8 @@
 ---
 template: main.html
-hidden: false
+hide: toc
 ---
 
-Replace me.
+# Home Page
+
+Replace me
