@@ -62,7 +62,7 @@ plugins:
   - search
   - open-in-new-tab
   - redirects:
-      map_file: docs/redirect_map.yml
+      map_file: redirect_map.yml
   - awesome-pages:
       filename: .pages.yml
   - tags:
