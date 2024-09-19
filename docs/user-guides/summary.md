@@ -7,4 +7,5 @@
 * [Keypairs: Create and Manage](create-and-manage-keypairs/)
 * [Object Storage: Create and Manage](create-and-manage-object-storage/)
 * [Set up your CLI environment](setting-up-your-CLI-environment/)
+* [Avaliable Instance Flavours](rdc-flavors/)
 * */
