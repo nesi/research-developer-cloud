@@ -41,4 +41,4 @@ if __name__ == '__main__':
         '::%(levelname)s file=%(filename)s,title=%(name)s,col=0,endColumn=0,line=%(lineno)s::%(message)s'))
     log.addHandler(sh)
     config = load_config(config_file_path="./mkdocs.yml")
-    build.build(config, dirty=True)
+    build.build(config)

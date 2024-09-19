@@ -23,13 +23,13 @@ def define_env(env):
     return
 
 
-def on_pre_page_macros(env):
-    return
+# def on_pre_page_macros(env):
+#     return
 
 
-def on_post_page_macros(env):
-    return
+# def on_post_page_macros(env):
+#     return
 
 
-def on_post_build(env):
-    return
+# def on_post_build(env):
+#     return
