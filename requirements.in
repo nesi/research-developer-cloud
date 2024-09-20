@@ -1,0 +1,25 @@
+# documentation generation
+mkdocs
+mkdocs-section-index
+mkdocs-bootstrap4
+mkdocs-material
+mkdocs-spellcheck
+mkdocs-simple-hooks
+mkdocs-macros-plugin
+mkdocs-open-in-new-tab
+mkdocs-git-authors-plugin
+mkdocs-git-revision-date-localized-plugin
+mkdocs-redirects @ git+https://github.com/CallumWalley/mkdocs-redirects.git@map_file
+mkdocs-awesome-pages-plugin
+
+# checkers
+neoteroi-mkdocs
+codespell
+proselint
+linkcheckmd
+symspellpy
+pyspelling
+flashtext
+
+# additional tools
+pip-tools
