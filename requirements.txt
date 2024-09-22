@@ -137,6 +137,8 @@ mkdocs-git-committers-plugin==0.2.3
     # via mkdocs-bootstrap4
 mkdocs-git-revision-date-localized-plugin==1.2.9
     # via -r requirements.in
+mkdocs-glightbox==0.4.0
+    # via -r requirements.in
 mkdocs-macros-plugin==1.2.0
     # via -r requirements.in
 mkdocs-material==9.5.34
@@ -187,7 +189,9 @@ pygments==2.18.0
 pyjwt[crypto]==2.9.0
     # via pygithub
 pymdown-extensions==10.9
-    # via mkdocs-material
+    # via
+    #   -r requirements.in
+    #   mkdocs-material
 pynacl==1.5.0
     # via pygithub
 pyproject-hooks==1.1.0

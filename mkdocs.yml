@@ -42,7 +42,7 @@ markdown_extensions:
       title: On this page
       toc_depth: 3
   - pymdownx.details
-  - pymdownx.snippet
+  - pymdownx.snippets
   - pymdownx.superfences
   - pymdownx.highlight:
       anchor_linenums: true
