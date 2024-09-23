@@ -39,7 +39,6 @@ markdown_extensions:
   - admonition
   - attr_list
   - footnotes
-
   - toc:
       baselevel: 1
       permalink: true
@@ -52,8 +51,6 @@ markdown_extensions:
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.snippets: null
-  - neoteroi.cards
-  - neoteroi.timeline
 extra:
   analytics:
     provider: google
@@ -75,9 +72,6 @@ plugins:
       on_error_fail: true
       verbose: false
 extra_css:
-  - assets/stylesheets/neoteroi-mkdocs.css
-  - assets/stylesheets/footer.css
-  - assets/stylesheets/custom_admonations.css
   - assets/stylesheets/theme.css
 extra_javascript:
   - assets/javascripts/general.js
