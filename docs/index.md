@@ -1,3 +1,7 @@
+---
+hide: toc
+---
+
 # Research Developer Cloud
 
 [cards cols=3 (./docs/cards-services.yaml)]

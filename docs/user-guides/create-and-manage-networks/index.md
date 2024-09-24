@@ -16,9 +16,9 @@ The networks within FlexiHPC are all `Software Defined Networks` so can overlap 
 
 Networks can be created and managed in 2 ways
 
-- [Create and Manage networks with the Dashboard](create-and-manage-networks-with-the-dashboard.md)
+- [Create and Manage networks with the Dashboard](with_the_dashboard/create-and-manage-networks-with-the-dashboard.md)
 
-- [Create and Manage networks via CLI](create-and-manage-networks-via-cli.md)
+- [Create and Manage networks via CLI](with_the_cli/create-and-manage-networks-via-cli.md)
 
 Within the network tab you also have the following that you are able to manage
 
@@ -28,9 +28,9 @@ A security group acts as a virtual firewall for servers and other resources on a
 
 Security Groups can be created and managed within the FlexiHPC dashboard. However, advanced users can take advantage of the OpenStack CLI to manage Security Groups.
 
-- [Create and Manage Security groups with the Dashboard](manage-security-groups-with-the-dashboard.md)
+- [Create and Manage Security groups with the Dashboard](with_the_dashboard/manage-security-groups-with-the-dashboard.md)
 
-- [Manage Security groups via CLI](manage-security-groups-via-cli.md)
+- [Manage Security groups via CLI](with_the_cli/manage-security-groups-via-cli.md)
 
 ## Floating IPs
 
@@ -40,9 +40,9 @@ However, in addition to the fixed IP address, a floating IP address can also be 
 
 If you wish to connect to an instance within the FlexiHPC platform from outside then these are required.
 
-- [Manage Floating IPs with the Dashboard](manage-floating-ips-via-the-dashboard.md)
+- [Manage Floating IPs with the Dashboard](with_the_dashboard/manage-floating-ips-via-the-dashboard.md)
 
-- [Manage Floating IPs with the CLI](manage-floating-ips-via-cli.md)
+- [Manage Floating IPs with the CLI](with_the_cli/manage-floating-ips-via-cli.md)
 
 ## Static IPs
 
@@ -50,6 +50,6 @@ If you wanted to create an instance with a fixed static IP address this can be a
 
 These network ports can be managed 2 ways
 
-- [Create and Manage network ports with the Dashboard](create-and-manage-network-ports-with-the-dashboard.md)
+- [Create and Manage network ports with the Dashboard](with_the_dashboard/create-and-manage-network-ports-with-the-dashboard.md)
 
-- [Create and manage network ports via CLI](create-and-manage-network-ports-via-cli.md)
+- [Create and manage network ports via CLI](with_the_cli/create-and-manage-network-ports-via-cli.md)

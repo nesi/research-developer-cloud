@@ -14,12 +14,12 @@ FlexiHPC supplies many OS images within the Platform. However should you require
 
 The two ways to add an image are as follows:
 
-- [Upload an Image via the Dashboard](upload-an-image-via-the-dashboard.md)
+- [Upload an Image via the Dashboard](with-the-dashboard/upload-an-image-via-the-dashboard.md)
 
-- [Upload an Image via CLI](upload-an-image-via-cli.md)
+- [Upload an Image via CLI](with-the-cli/upload-an-image-via-cli.md)
 
 When managing images within the FlexiHPC platform we have the same options either via the dashboard or the cli
 
-- [Managing Images via the Dashboard](managing-images-via-the-dashboard.md)
+- [Managing Images via the Dashboard](with-the-dashboard/managing-images-via-the-dashboard.md)
 
-- [Managing Images via CLI](managing-images-via-cli.md)
+- [Managing Images via CLI](with-the-cli/managing-images-via-cli.md)

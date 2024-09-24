@@ -6,7 +6,7 @@ theme:
   custom_dir: overrides
   favicon: assets/icons/favicon.ico
   language: en
-  logo: assets/images/nesi-logo.png
+  logo: assets/icons/logo.svg
   palette:
     - primary: custom
       scheme: default
@@ -59,26 +59,27 @@ markdown_extensions:
 plugins:
   - glightbox
   - search
-  - literate-nav:
-      nav_file: summary.md
   - git-revision-date-localized:
       enable_creation_date: true
   - open-in-new-tab
   - redirects:
       map_file: redirect_map.yml
+  - awesome-pages:
+      filename: .pages.yml
+  - tags:
+      tags: false
   - macros:
       include_dir: overrides
       module_name: macro_hooks
       on_error_fail: true
       verbose: false
-# extra:
-#   analytics:
-#     provider: google
-#     property: <insert tracking code here>
+extra:
+  analytics:
+    provider: google
+    property: G-C9SP9NWT3Z
 extra_css:
   - assets/stylesheets/neoteroi-mkdocs.css
-  - assets/stylesheets/footer.css
-  - assets/stylesheets/custom_admonations.css
+  - assets/stylesheets/neoteroi-cards.css
   - assets/stylesheets/theme.css
 extra_javascript:
   - assets/javascripts/general.js
