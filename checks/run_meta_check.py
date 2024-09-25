@@ -100,6 +100,8 @@ def _run_check(f):
     for r in f():
         print(f"::{r.get('level', 'warning')} file={input_path},title={f.__name__},col={r.get('col', 0)},endColumn={r.get('endColumn', 99)},line={r.get('line', 1)}::{r.get('message', 'something wrong')}")
         sys.stdout.flush()
+        time.sleep(0.01)
+
 
 
 def _title_from_filename():
@@ -268,4 +270,3 @@ if __name__ == "__main__":
 
     # FIXME terrible hack to make VSCode in codespace capture the error messages
     # see https://github.com/microsoft/vscode/issues/92868 as a tentative explanation
-    time.sleep(5)

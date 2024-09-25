@@ -48,6 +48,7 @@
                     "column": 4,
                     "endLine": 5,
                     "message": 7,
+                    "loop": true
                 },
                 "owner": "proselint",
                 "fileLocation": "autoDetect",
@@ -94,7 +95,7 @@
                     "column": 4,
                     "endColumn": 5,
                     "line": 6,
-                    "message": 7
+                    "message": 7,
                 },
                 "owner": "test-build",
                 "fileLocation": [

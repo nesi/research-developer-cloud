@@ -1,14 +1,11 @@
 ---
 template: main.html
 hide: toc
-title: Home Page
+title: Fail Checks
 invalid-entry: something
 ---
 
-# Home Page
-
-
-Replace me
+# Fail Checks
 
 Designed to trigger as many fails as possible.
 
@@ -18,14 +15,11 @@ speling checkces arre gooder
 
 ## Link checks
 
-
-
 ### Missing image
 
 ![fake image](../docs/assets/fake_image.png)
 
 ### Missing link
-
 
 [fake link](../docs/fake_page.md)
 
@@ -33,9 +27,25 @@ speling checkces arre gooder
 
 [missing anchor](#missinganchor) (Correct would be `#missing-anchor`)
 
-### Naked links:
+typos in cobedlocks or links should be allowed.
+
+```md
+Thats not how you spell cobedlocks at all.
+```
+
+[tpyos should be picked up here](www.butnothere.com)
+
+### Naked links
 
 www.nesi.org.nz
+
+
+## Structure
+
+#### Skipping a level
+
+## Only child
+
 
 ## Prose checks
 
@@ -46,20 +56,9 @@ March, 2013 was notable in that
 In February of 2010, the mayor considered
 It's 5 pm somewhere.
 It's 12 a.m., time to eat lunch.
-
-
-
 It's 11 p.m. at night.
-This is a sentence! One space after a period.
 This is a sentence.  Two spaces after a period.
-This is a sentence?  Two spaces after a period.
-This is a sentence. One space after a period.
-This is a sentence. One space after a period.
-This is a sentence. One space after a period.
-This is a sentence. One space after a period.
 centre centre center
-organize, organized, organizing, organise
-recognize, recognise, recognise, recognise
 $1000 USD
 I hit him over the head with a 2 x 4.
 A bunch of antelopes walked by the road.
@@ -146,9 +145,6 @@ The Chronicals of Narnia
 I did not pay for the check. Honestly, attention to detail is useful.
 I did not pay attention to detail.
 I did not pay any attention to detail.
-(c) 2015
-(R) The Corporation
-Use ellipsis not three dots...
 The Manchesterian was a good Brit.
 One from Michigan is not a Michiganite but a Michigander.
 One from Colorado is not a Coloradoan but a Coloradan.
