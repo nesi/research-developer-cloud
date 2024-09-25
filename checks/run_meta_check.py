@@ -62,7 +62,7 @@ def main():
         _nav_check()
         with open(input_path, "r") as f:
             print(f"Checking meta for {f.name}")
-            try:
+            if 1:
                 contents = f.read()
                 match = re.match(r"---\n([\s\S]*?)---", contents, re.MULTILINE)
                 if not match:
@@ -93,8 +93,8 @@ def main():
                         _run_check(check)
                 for check in ENDCHECKS:
                     _run_check(check)
-            except Exception as e:
-                print(f"::error file={input_path},title=misc,col=0,endColumn=0,line=1 ::{e}")
+            # except Exception as e:
+            #     print(f"::error file={input_path},title=misc,col=0,endColumn=0,line=1 ::{e}")
 
 def _run_check(f):
     for r in f():
@@ -138,26 +138,29 @@ def _get_nav_tree():
             return toc[a[0]]
         return _unpack(toc[a[0]]["children"], a[1:])
 
-    if in_code_block:
-        return
+    try:
+        if in_code_block:
+            return
 
-    header_match = re.match(r"^(#+)\s*(.*)$", line)
+        header_match = re.match(r"^(#+)\s*(.*)$", line)
 
-    if not header_match:
-        return
-    
-    header_level = len(header_match.group(1))
-    header_name = header_match.group(2)
+        if not header_match:
+            return
+        
+        header_level = len(header_match.group(1))
+        header_name = header_match.group(2)
 
-    if header_level == 1:
-        toc = {header_name: {"lineno": lineno, "children": {}}}
-        toc_parents = [header_name]
+        if header_level == 1:
+            toc = {header_name: {"lineno": lineno, "children": {}}}
+            toc_parents = [header_name]
 
-    while header_level < len(toc_parents)+1:
-        toc_parents.pop(-1)
+        while header_level < len(toc_parents)+1:
+            toc_parents.pop(-1)
 
-    _unpack(toc, toc_parents)["children"][header_name] = {"level": header_level, "lineno": lineno, "children": {}}
-    toc_parents += [header_name]
+        _unpack(toc, toc_parents)["children"][header_name] = {"level": header_level, "lineno": lineno, "children": {}}
+        toc_parents += [header_name]
+    except Exception:
+        print(f"::error file={input_path},title=misc-nav,col=0,endColumn=0,line=1 ::Failed to parse Nav tree. Something is wrong.")
 
 
 def _nav_check():

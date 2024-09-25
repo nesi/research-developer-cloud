@@ -9,7 +9,16 @@
             "type": "debugpy",
             "request": "launch",
             "program": "checks/run_proselint.py",
-            "args": ["docs/index.md"],
+            "args": ["docs/fail_checks.md"],
+            "console": "integratedTerminal",
+            "justMyCode": false
+        },
+        {
+            "name": "Debug Meta Check",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "checks/run_meta_check.py",
+            "args": ["docs/fail_checks.md"],
             "console": "integratedTerminal",
             "justMyCode": false
         },
