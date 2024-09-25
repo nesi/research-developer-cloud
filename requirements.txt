@@ -189,9 +189,7 @@ pygments==2.18.0
 pyjwt[crypto]==2.9.0
     # via pygithub
 pymdown-extensions==10.9
-    # via
-    #   -r requirements.in
-    #   mkdocs-material
+    # via mkdocs-material
 pynacl==1.5.0
     # via pygithub
 pyproject-hooks==1.1.0
