@@ -12,7 +12,8 @@ vote_sum: 1
 ---
 
 !!! note
-    The openstack CLI will need to be setup to interact with the FlexiHPC system. Please read [Setting up your CLI environment](../../setting-up-your-CLI-environment/index.md) to interact with FlexiHPC to get started.
+    The openstack CLI will need to be setup to interact with the FlexiHPC system. Please read 
+    [Setting up your CLI environment](../../setting-up-your-CLI-environment/index.md) to interact with FlexiHPC to get started.
 
 To upload an image to FlexiHPC we will be using the command `openstack image create` to upload the image.
 
@@ -81,5 +82,4 @@ The command window will process silently as it uploads it to the FlexiHPC platfo
 !!! note
     Adding `--wait` to the end of the command will give you a progress bar rather then returning with the status `queued`
 
-We should then be able to use the `id` returned to launch an instance from either the [Dashboard](../../launch-and-mange-instances/with_the_dashboard/launch-an-instance-via-dashboard.md) or the [CLI](../../launch-and-mange-instances/with-the-CLI/launch-an-instance-via-cli.md)
-
+We should then be able to use the `id` returned to launch an instance from either the [Dashboard](../../launch-and-manage-instances/with_the_dashboard/launch-an-instance-via-dashboard.md) or the [CLI](../../launch-and-manage-instances/with_the_CLI/launch-an-instance-via-cli.md)

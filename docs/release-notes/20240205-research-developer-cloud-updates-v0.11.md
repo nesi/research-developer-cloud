@@ -12,7 +12,8 @@ title: Research Developer Cloud updates v0.11 - 20240205
 * UPDATE: [Rocky<sup>1</sup>](https://rockylinux.org/) images are now available for tenants to use on VMs
 
 ####Object Storage
-* UPDATE: Now operational and is in a user-testing phase. Please reach out if you would like some quota and help getting started! Early documentation can be found here: [Create and Manage Object Storage - Research Developer Cloud](/user-guides/create-and-manage-object-storage/) 
+* UPDATE: Now operational and is in a user-testing phase. Please reach out if you would like some quota and help getting started! Early documentation can be found here: 
+[Create and Manage Object Storage - Research Developer Cloud](../user-guides/create-and-manage-object-storage/index.md) 
 
 ##Blueprints
 

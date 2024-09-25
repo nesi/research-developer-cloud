@@ -7,7 +7,7 @@ Our platform's building blocks include:
 `Compute`
 :   Virtual machines optimised for high-performance computational needs. Multiple flavours of CPU and GPU resources to support a range of compute and memory requirements.
 
-    → Get started with our [Compute User Guides](launch-and-mange-instances/index.md)
+    → Get started with our [Compute User Guides](launch-and-manage-instances/index.md)
 
 `Images`
 :   Tailored operating systems to meet your research computing and data needs. Ready-to-use options available, as well as capability to create custom images and contribute to a pool of community-developed images.

@@ -12,7 +12,8 @@ vote_sum: 1
 ---
 
 !!! note
-    The openstack CLI will need to be setup to interact with the FlexiHPC system. Please read [Setting up your CLI environment](../../setting-up-your-CLI-environment/index.md) to interact with FlexiHPC to get started.
+    The openstack CLI will need to be setup to interact with the FlexiHPC system. Please read 
+    [Setting up your CLI environment](../../setting-up-your-CLI-environment/index.md) to interact with FlexiHPC to get started.
 
     We highly recommend that you supply the parameter `--key-name` to allow connections with your SSH key
 
@@ -86,4 +87,4 @@ The list shows the ID, name, status, and private (and if assigned, public) IP ad
 
 If the status for the instance is `ACTIVE`, the instance is online.
 
-If you would like to access your Compute instance outside the FlexiHPC platform you will need to associate a `floating ip` to your instance. Reading [Manage Floating IPs via CLI](../../create-and-manage-networks/with_the_cli/manage-floating-ips-via-cli.md), You should then be able to connect to your instance using ssh which is explained more in [Connect to your instance by using SSH](../connect-to-instance-ssh.md).
+If you would like to access your Compute instance outside the FlexiHPC platform you will need to associate a `floating ip` to your instance. Reading [Manage Floating IPs via CLI](../../create-and-manage-networks/with_the_CLI/manage-floating-ips-via-cli.md), You should then be able to connect to your instance using ssh which is explained more in [Connect to your instance by using SSH](../connect-to-instance-ssh.md).

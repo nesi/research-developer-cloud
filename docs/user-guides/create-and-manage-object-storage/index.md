@@ -30,6 +30,6 @@ Interacting with the FlexiHPC Object storage can be done a few ways outside of t
 
 - [Interacting with the S3 protocol with Boto3](using-boto3-to-interact-with-object-storage.md)
 
-- [Using FlexiHPC object storage for Terraform state file](../launch-and-mange-instances/other_tools/deployment-of-an-instance-with-terraform.md#using-flexihpc-object-storage-to-store-the-terraform-state-file)
+- [Using FlexiHPC object storage for Terraform state file](../launch-and-manage-instances/other_tools/deployment-of-an-instance-with-terraform.md#using-flexihpc-object-storage-to-store-the-terraform-state-file)
 
 - [Accessing object storage with Cyberduck](using-cyberduck-to-interact-with-object-storage.md)

@@ -17,7 +17,7 @@ FlexiHPC offers 2 ways to Launch and instance on the platform:
 
 This is the most user friendly way to get up and running as its all done via the FlexiHPC dashboard. 
 
-- [Launch an Instance via CLI](with-the-CLI/launch-an-instance-via-cli.md)
+- [Launch an Instance via CLI](with_the_CLI/launch-an-instance-via-cli.md)
 
 This is a more advance way of interacting with the FlexiHPC platform. It requires some environment setup however it gives you the most control over the your project within the platform.
 
@@ -31,4 +31,4 @@ FlexiHPC allows you to resize and instance in 2 ways
 
 - [Resizing an instance via the dashboard](with_the_dashboard/resizing-an-Instance-via-the-dashboard.md)
 
-- [Resizing an instance via CLI](with-the-CLI/resizing-an-Instance-via-cli.md)
+- [Resizing an instance via CLI](with_the_CLI/resizing-an-Instance-via-cli.md)

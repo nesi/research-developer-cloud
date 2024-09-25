@@ -178,4 +178,4 @@ You can launch an instance from various sources.
 
 - [Launch an instance from an image](./launch-an-instance-from-an-image.md)
 
-- [Launch an instance from a volume](../launch-an-instance-from-a-volume.md)
+- [Launch an instance from a volume](./launch-an-instance-from-a-volume.md)

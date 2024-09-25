@@ -2,7 +2,7 @@
 
 To use SSH to connect to your instance, use the downloaded keypair file. You will also need to ensure you have created and assigned a `Security group` to your instance that allows connections on port 22.
 
-Read Create and Manage Security Groups via [Dashboard](../create-and-manage-networks/with_the_dashboard/manage-security-groups-with-the-dashboard.md) or [CLI](../create-and-manage-networks/with_the_cli/manage-security-groups-via-cli.md) to create one that allows port 22 if you have not done so already. You will then need to add that to the Instance if you havent already via the [Dashboard](with_the_dashboard/manage-security-groups-of-an-Instance-via-the-dashboard.md#attach-a-security-group) or [CLI](with-the-CLI/manage-security-groups-of-an-Instance-via-the-cli.md#adding-a-security-group-to-an-instance)
+Read Create and Manage Security Groups via [Dashboard](../create-and-manage-networks/with_the_dashboard/manage-security-groups-with-the-dashboard.md) or [CLI](../create-and-manage-networks/with_the_CLI/manage-security-groups-via-cli.md) to create one that allows port 22 if you have not done so already. You will then need to add that to the Instance if you havent already via the [Dashboard](with_the_dashboard/manage-security-groups-of-an-Instance-via-the-dashboard.md#attach-a-security-group) or [CLI](with_the_CLI/manage-security-groups-of-an-Instance-via-the-cli.md#adding-a-security-group-to-an-instance)
 
 !!! note
     The user name is `ubuntu` for the Ubuntu cloud images on FlexiHPC. We have a list of default users for the most common cloud images in [Default user for images](default-user-nesi-images.md)
