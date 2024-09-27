@@ -2,7 +2,6 @@
 template: main.html
 hide: toc
 title: Fail Checks
-invalid-entry: something
 ---
 
 # Fail Checks
@@ -10,6 +9,7 @@ invalid-entry: something
 Designed to trigger as many fails as possible.
 
 ## Spelling Checks
+
 
 speling checkces arre gooder
 
