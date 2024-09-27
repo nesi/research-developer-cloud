@@ -1,18 +1,33 @@
 # NeSI docs template
 
-Put some infor about the site here.
+Replace this readme with info about the site.
 
-## Contents
+## First Time Setup
 
-The repository is organised using the following folders:
+You will need to have Python **3.10** or later installed on your computer.
 
-- `checks` : scripts intended to be run by CI,
-- `docs`: markdown files, structure determines categories and sections[^1],
-- `docs/assets`: non-template related files, e.g. images,
-- `overrides`: theme overides or extensions for page templates.
-- `overrides/partials`: Overrides and extensions for sub components.
+Clone this repository and create a Python virtual environment using:
 
-[^1]: A section or category can be replaced by an `index.md` file, this will replace the default nav with a page.
+```sh
+git clone https://github.com/nesi/nesi-mkdoc-template.git
+cd nesi-mkdoc-template
+python -m venv .venv
+source .venv/bin/activate
+pip3 install pip-tools
+pip-compile
+pip3 install -r requirements.txt
+```
+
+## Build and deploy
+
+```sh
+source .venv/bin/activate
+mkdocs serve -c
+```
+
+Take note of any warnings or errors.
+
+A link to the deployment will be printed once served.
 
 ## Developer Documentation
 
