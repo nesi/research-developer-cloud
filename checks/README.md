@@ -16,6 +16,12 @@ Spellcheck pipeline settings can be modified in [.spellcheck.yml](../.spellcheck
 List of custom words can be found in [dictionary.txt](../docs/assets/glossary/dictionary.txt),
 however you **should not edit this manually**, see [adding-words-to-dictionary](../docs/CONTRIBUTING.md#adding-words-to-dictionary).
 
+This list is automatically updated daily in the case of docs.nesi, but not the other sites.
+You should occasionally run 
+`wget -O docs/assets/glossary/dictionary.txt https://raw.githubusercontent.com/nesi/nesi-wordlist/main/outputs/dictionary.txt`
+to keep it up to date.
+ 
+
 ### Limitations
 
 Spellchecker does not provide output lineumber / column.
