@@ -36,7 +36,7 @@ jobs:
           repo: ${TARGET_REPO}
           github_token: ${{ secrets.PAT }}
           workflow_file_name: deploy.yml
-          client_payload: '{\"targets\":\"${GITHUB_REPOSITORY}:${HEAD}\", \"use-cache\":\"true\"}'
+          client_payload: '{"targets":"${GITHUB_REPOSITORY}:${HEAD}", "use-cache":"true"}'
     #   - name: Wait for Workflow Action
     #     run: |
     #       curl -L \
