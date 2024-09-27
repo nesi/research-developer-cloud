@@ -9,17 +9,17 @@
   --nesi-green: #cce310;
 
   [data-md-color-scheme="default"]{
-    --md-primary-fg-color:               var(--nesi-red);
+    --md-primary-fg-color:               var(--nesi-grey--light);
     
-    --md-accent-fg-color:                var(--nesi-orange);;
-    --md-accent-fg-color--transparent:   rgb(244, 121, 37, 0.25);
+    --md-accent-fg-color:                var(--nesi-purple);;
+    --md-accent-fg-color--transparent:   rgba(202, 159, 213, 0.25);
   }
 
     /* --md-accent-bg-color:                rgb(210,227,235); */
   [data-md-color-scheme="slate"] {
-    --md-primary-fg-color:               var(--nesi-red);
-    --md-accent-fg-color:                var(--nesi-orange);;
-    --md-accent-fg-color--transparent:   rgb(244, 121, 37, 0.25);
+    --md-primary-fg-color:               var(--nesi-grey--light);
+    --md-accent-fg-color:                var(--nesi-purple);;
+    --md-accent-fg-color--transparent:   rgba(202, 159, 213, 0.25);
 
     .nt-card-image>img {
       filter: brightness(0) invert(1);
