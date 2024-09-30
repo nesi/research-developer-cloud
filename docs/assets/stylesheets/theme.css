@@ -67,11 +67,6 @@
 }
 /* fix neotiri card colors */
 
-/* Fix codeblock formatting change.*/
-.md-typeset .md-code__content { 
-    display: inline;
-}
-
   /* Make button more buttony */
 .md-button--primary {
   box-shadow: grey 2px 2px 2px;
