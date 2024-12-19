@@ -1,6 +1,7 @@
 site_name: Research Developer Cloud
 repo_url: https://github.com/nesi/research-developer-cloud
 repo_name: nesi/research-developer-cloud
+site_dir: public
 theme:
   name: material
   custom_dir: overrides
