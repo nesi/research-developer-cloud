@@ -73,7 +73,7 @@ Buckets:
 
 ## Uploading a file to object storage
 
-You will need to know the name of the container you wish to upload the file too. You can either get this from the [dashboard](create-and-manage-object-storage-with-the-dashboard.md) or [CLI](create-and-manage-object-storage-via-cli.md)
+You will need to know the name of the container you wish to upload the file too. You can either get this from the [dashboard](with_the_dashboard/create-and-manage-object-storage-with-the-dashboard.md) or [CLI](with_the_CLI/create-and-manage-object-storage-via-cli.md)
 
 We then use the below code to upload a file to the container we specify
 
@@ -92,7 +92,7 @@ s3_client.upload_file(<FILE_LOCATION>, <BUCKET_NAME>, <FILENAME_ON_S3>)
 
 ## Downloading a file from object storage
 
-You will need to know the name of the container you wish to download the file from. You can either get this from the [dashboard](create-and-manage-object-storage-with-the-dashboard.md) or [CLI](create-and-manage-object-storage-via-cli.md)
+You will need to know the name of the container you wish to download the file from. You can either get this from the [dashboard](with_the_dashboard/create-and-manage-object-storage-with-the-dashboard.md) or [CLI](with_the_CLI/create-and-manage-object-storage-via-cli.md)
 
 We use the below code to download a file from the container we specify
 

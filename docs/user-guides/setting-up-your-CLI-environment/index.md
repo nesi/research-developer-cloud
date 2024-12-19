@@ -1,5 +1,4 @@
 ---
-hidden: false
 label_names:
 - instance
 - launch

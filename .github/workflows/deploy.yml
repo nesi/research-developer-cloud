@@ -1,0 +1,71 @@
+name: Deploy to gh-pages 
+on: 
+ push:
+    branches: [main]
+ workflow_dispatch:
+  # inputs:
+    # pr-deploy:
+    #   description: Deploy open merge requests in sub-directories.
+    #   type: boolean
+    #   default: true
+env:
+  PYTHON_VERSION: 3.x
+  GH_TOKEN: ${{ github.token }}
+permissions:
+  contents: write
+  pull-requests:  write
+  id-token: write
+  pages: write
+jobs:
+  documentation:
+    name: Build documentation
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          sparse-checkout: |
+            docs
+            overrides
+      - name: Set up Python runtime
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: pip
+          cache-dependency-path: requirements.txt
+      - name: Set up build cache
+        uses: actions/cache/restore@v4
+        with:
+          key: mkdocs-${{ hashfiles('.cache/**') }}
+          path: .cache
+          restore-keys: |
+            mkdocs-
+      - name: Install Python dependencies
+        run: pip install -r requirements.txt
+      - name: Build documentation
+        run: |
+              mkdocs build --clean --quiet
+      - name: Adjust permissions
+        run: |
+          chmod -c -R +rX public/ | while read line; do
+            echo "::info title=Invalid file permissions automatically fixed::$line"
+          done
+      - name: Upload to GitHub Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4
+      - name: Save build cache
+        uses: actions/cache/save@v4
+        with:
+          key: mkdocs-${{ hashfiles('.cache/**') }}
+          path: .cache
+      # - name: Post messages to PRs
+      #   run: |
+      #     for pr in ${{ steps.dev-deps.outputs.branches }}; do
+      #       msg="Test deployment available at <a href=\"https://docs.nesi.org.nz/${pr}\">https://docs.nesi.org.nz/${pr}</a>"
+      #       (gh pr comment ${pr} --edit-last --body "${msg}") || (gh pr comment ${pr} --body "${msg}")
+      #     done
+

@@ -1,0 +1,14 @@
+{
+	"recommendations": [
+		"samuelcolvin.jinjahtml",
+		"DavidAnson.vscode-markdownlint",
+		"arsprogramma.compliment",
+		"TakumiI.markdowntable",
+		"redhat.vscode-yaml",
+		"GitHub.vscode-pull-request-github",
+		"jebbs.markdown-extended",
+		"Gruntfuggly.triggertaskonsave",
+		"carlthome.git-line-blame"
+	],
+}
+

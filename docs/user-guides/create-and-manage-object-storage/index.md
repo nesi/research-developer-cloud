@@ -18,9 +18,9 @@ The general use case for object storage is storing data that you upload once and
 
 There are a few ways to create and mange object storage within FlexiHPC
 
-- [Creating and Managing object storage via the Dashboard](create-and-manage-object-storage-with-the-dashboard.md)
+- [Creating and Managing object storage via the Dashboard](with_the_dashboard/create-and-manage-object-storage-with-the-dashboard.md)
 
-- [Creating and Managing object storage via CLI](create-and-manage-object-storage-via-cli.md)
+- [Creating and Managing object storage via CLI](with_the_CLI/create-and-manage-object-storage-via-cli.md)
 
 If you are looking to interact with the s3 Protocol then you need to also generate yourself some EC2 credentials
 
@@ -30,6 +30,6 @@ Interacting with the FlexiHPC Object storage can be done a few ways outside of t
 
 - [Interacting with the S3 protocol with Boto3](using-boto3-to-interact-with-object-storage.md)
 
-- [Using FlexiHPC object storage for Terraform state file](../launch-and-mange-instances/deployment-of-an-instance-with-terraform.md#using-flexihpc-object-storage-to-store-the-terraform-state-file)
+- [Using FlexiHPC object storage for Terraform state file](../launch-and-manage-instances/other_tools/deployment-of-an-instance-with-terraform.md#using-flexihpc-object-storage-to-store-the-terraform-state-file)
 
 - [Accessing object storage with Cyberduck](using-cyberduck-to-interact-with-object-storage.md)

@@ -1,0 +1,6 @@
+public/*
+production/*
+**.pyc
+.venv/*
+site/*
+dictionary.dic

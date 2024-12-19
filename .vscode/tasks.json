@@ -1,0 +1,119 @@
+{
+    // Multiple patterns currently don't work, so make sure each task outputs only ONE type of message.
+    "version":"2.0.0",
+    "tasks": [
+        {
+            "label": "meta-checks",
+            "args": [
+                "${file}"
+            ],
+            "presentation": {
+                "reveal":"never",
+                "showReuseMessage": false
+            },
+            "command": "./checks/run_meta_check.py",
+
+            "problemMatcher": {
+                "severity": "info",
+                "pattern": {
+                    "regexp": "^::(notice|warning|error) file=(.*?),title=(.*?),col=([0-9]*),endColumn=([0-9]*),line=([0-9]*)::(.*)$",
+                    "severity": 1,
+                    "file": 2,
+                    "code": 3,
+                    "column": 4,
+                    "endColumn": 5,
+                    "line": 6,
+                    "message": 7,
+                },
+                "owner": "meta-check",
+                "fileLocation": "autoDetect",
+            },
+        },
+        {
+            "label": "proselint-checks",
+            "args": [
+                "${file}"
+            ],
+            "presentation": {
+                "reveal":"never",
+                "showReuseMessage": false
+            },
+            "command": "./checks/run_proselint.py",
+            "problemMatcher": {
+                "pattern": {
+                    "regexp": "^::(notice|warning|error) file=(.*?),line=([0-9]*),col=([0-9]*),endColumn=([0-9]*),title=(.*?)::(.*)$",
+                    "severity": 1,
+                    "file": 2,
+                    "line": 3,
+                    "column": 4,
+                    "endLine": 5,
+                    "message": 7,
+                    "loop": true
+                },
+                "owner": "proselint",
+                "fileLocation": "autoDetect",
+            },
+        },
+        {
+            "label": "spelling-checks",
+            "args": [
+                "${file}"
+            ],
+            "presentation": {
+                "reveal":"never",
+                "showReuseMessage": false
+            },
+            "command": "./checks/run_pyspelling.py",
+            "problemMatcher": {
+                "pattern": {
+                    "regexp": "^::(notice|warning|error) file=(.*?),line=([0-9]*),col=([0-9]*),endColumn=([0-9]*),title=(.*?)::(.*)$",
+                    "severity": 1,
+                    "file": 2,
+                    "line": 3,
+                    "column": 4,
+                    "endColumn": 5,
+                    "message": 7,
+                },
+                "owner": "spelling",
+                "fileLocation": "autoDetect",
+            },
+        },
+        {
+            "label": "test-build",
+            "presentation": {
+                "reveal":"never",
+                "showReuseMessage": false
+            },
+            "command": "./checks/run_test_build.py",
+            "problemMatcher": {
+                "severity": "info",
+                "pattern": {
+                    "regexp": "^::(.*) file=(.*?),title=(.*?),col=([0-9]*),endColumn=([0-9]*),line=([0-9]*)::(.*)$",
+                    "severity": 1,
+                    "file": 2,
+                    "code": 3,
+                    "column": 4,
+                    "endColumn": 5,
+                    "line": 6,
+                    "message": 7,
+                },
+                "owner": "test-build",
+                "fileLocation": [
+                    "relative",
+                    "${workspaceFolder}/docs"
+                ],
+            },
+        },
+        {
+            "label": "serve",
+            "group": "build",
+            "type": "shell",
+            "isBackground": true,
+            "presentation": {
+                "reveal":"never",
+                "showReuseMessage": false
+            },
+            "command": "mkdocs serve --dirty"
+        },
+    ]
+}
