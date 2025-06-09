@@ -32,10 +32,11 @@ Within the `Allocate Floating IP` dialog you have the following options
 :   A friendly description for what this IP is used for
 
 `DNS Domain`
-:   TODO: Confirm with Sean what this means
+:   Optional. The DNS domain where a record will be created for this floating IP (e.g., `example.com`). Contact NeSI support for available domains. Leave blank if DNS resolution is not needed.
 
 `DNS Name`
-:   TODO: Confirm with Sean what this means
+:   Optional. The hostname within the DNS domain (e.g., `myserver` would create `myserver.example.com`). Leave blank if DNS resolution is not needed.
+
 
 !!! note
     The default settings are fine should you not wish to configure anything further.
