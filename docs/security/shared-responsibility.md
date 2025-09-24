@@ -13,4 +13,3 @@ The way we work together on this platform is captured within a Shared Responsibi
 
 This shared way of working is becoming more common, yet there is plenty to learn. We are openly exploring how we can bring greater value to, or reduce the risk of your research efforts, and of how best to refine the attributes of this sovereign platform and how we carry our shared responsibilities. We’ll share our experiences and insights, and welcome you to share yours.
 
-## 

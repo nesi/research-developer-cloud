@@ -11,5 +11,3 @@ title: Security Policy
 !!! note
     We have published a new security policy [NeSI Security Policy](https://www.nesi.org.nz/about-us/security-privacy/security-policy)
 
-
-##
