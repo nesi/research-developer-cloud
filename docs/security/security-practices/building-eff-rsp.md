@@ -5,7 +5,7 @@ label_names:
 title: Building Effective and Efficient Research Security Programs
 ---
 
-## Geting Started
+## Getting Started
 
 A broad approach to building effective and research security programs
 
