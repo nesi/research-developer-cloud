@@ -4,7 +4,7 @@ label_names:
 - instance
 - launch
 position: 1
-title: Launch and mange instances
+title: Launch and manage instances
 vote_count: 1
 vote_sum: 1
 ---

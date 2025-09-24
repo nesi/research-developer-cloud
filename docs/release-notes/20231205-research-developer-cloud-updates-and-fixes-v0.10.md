@@ -2,7 +2,7 @@
 hidden: false
 label_names:
 - release-note
-position: 2
+position: 3
 title: Research Developer Cloud updates and fixes v0.10 - 20231205
 ---
 
