@@ -12,12 +12,12 @@ A broad approach to building effective and research security programs
 `5 Ws and an H`
 Identifying the answers to 5 simple questions helps scope the engagement and resourcing
 
-When - Timing and length
-Where - The areas of impact (individuals, teams, services)
-Who - The audience (researchers, staff, students)
-What - What you intend to impact with the engagement (capability, simplification, culture, policy)
-Why - Is there an external driver or internal improvement?
-How - The plan: getting executive support, marketing, training, consulting, measurement, reporting, closure.
+When - Timing and length.  
+Where - The areas of impact (individuals, teams, services).  
+Who - The audience (researchers, staff, students).  
+What - What you intend to impact with the engagement (capability, simplification, culture, policy).  
+Why - Is there an external driver or internal improvement?  
+How - The plan: getting executive support, marketing, training, consulting, measurement, reporting, closure.  
 
 <figure markdown>
   ![Alt text](../../assets/images/security/5w-and-1h.png)
