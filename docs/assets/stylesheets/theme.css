@@ -8,18 +8,26 @@
   --nesi-red:#ef315e;
   --nesi-green: #cce310;
 
+  --reannz-blue : rgb(0,185, 228);
+  --reannz-blue--shade-negative1:rgb(0, 127, 156);
+  --reannz-blue--dark: rgb(0,28, 54);
+  --reannz-blue--dark-shade1: #2c485d;
+  --reannz-grey : rgb(195,200, 200);
+  --reannz-black : rgb(25,25, 25);
+  --reannz-green: rgb(190, 184, 6);
+  --reannz-green--dark: rgb(0, 170, 136);
+  --reannz-orange: rgb(241, 128, 0);
+  --reannz-purple: rgb(132, 121, 183);
+
   [data-md-color-scheme="default"]{
-    --md-primary-fg-color:               var(--nesi-grey--light);
-    
-    --md-accent-fg-color:                var(--nesi-purple);;
-    --md-accent-fg-color--transparent:   rgba(202, 159, 213, 0.25);
+    --md-primary-fg-color:               var(--reannz-blue--dark);
+    --md-accent-fg-color:                var(--reannz-blue);
   }
 
     /* --md-accent-bg-color:                rgb(210,227,235); */
   [data-md-color-scheme="slate"] {
-    --md-primary-fg-color:               var(--nesi-grey--light);
-    --md-accent-fg-color:                var(--nesi-purple);;
-    --md-accent-fg-color--transparent:   rgba(202, 159, 213, 0.25);
+    --md-primary-fg-color:               var(--reannz-blue--dark);
+    --md-accent-fg-color:                var(--reannz-blue--darkish);
 
     .nt-card-image>img {
       filter: brightness(0) invert(1);
@@ -27,10 +35,11 @@
   }
 }
 /* Logo biggification */
-.md-header__button.md-logo img, .md-header__button.md-logo svg {
+/* COMMENTED OUT FOR REANNZ LOGO */
+/* .md-header__button.md-logo img, .md-header__button.md-logo svg {
   height: 4rem;
   margin: -2rem;
-}
+} */
 
 /* Version table stuff */
 .md-tag.md-tag-ver{
@@ -72,7 +81,6 @@
   box-shadow: grey 2px 2px 2px;
 }
 
-
 /* prerequisite custom admonition */
 :root {
   --md-admonition-icon--prerequisite: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 9H7V7h10m0 6H7v-2h10m-3 6H7v-2h7M12 3a1 1 0 0 1 1 1 1 1 0 0 1-1 1 1 1 0 0 1-1-1 1 1 0 0 1 1-1m7 0h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2Z"/></svg>')
@@ -80,15 +88,15 @@
 
 .md-typeset .admonition.prerequisite,
 .md-typeset details.prerequisite {
-  border-color: rgb(170, 170, 60);
+  border-color: var(--reannz-green);
 }
 .md-typeset .prerequisite > .admonition-title,
 .md-typeset .prerequisite > summary {
-  background-color: rgba(170, 170, 60, 0.1);
+  background-color: rgba(190, 184, 6, 0.1); /*above color*/
 } 
 .md-typeset .prerequisite > .admonition-title::before,
 .md-typeset .prerequisite > summary::before {
-  background-color: rgb(170, 170, 60);
+  background-color:  var(--reannz-green);
   -webkit-mask-image: var(--md-admonition-icon--prerequisite);
           mask-image: var(--md-admonition-icon--prerequisite);
 }
@@ -98,32 +106,31 @@
   font-size: 12px;
   font-weight: 400;
   /* MB logo has black border */
-  background-color: #101010;
+  background-color: var(--reannz-black);
 }
 
-#partners {
-  height: auto;
-  background-color: #101010;
+/* e.g. inactive link text */ 
+.md-typeset a {
+   color: var(--reannz-blue--shade-negative1);
+}
+.md-typeset a:hover {
+   color: var(--reannz-blue);
+}
+/* Make deprecated logo stand out */
+span.md-status.md-status--deprecated {
+    filter: invert(50%) sepia(100%) saturate(1000%) hue-rotate(330deg) brightness(70%) contrast(1000%);
 }
 
-#partners #logos img {
-  height: 40px;
-  margin: 10px;
+/* Warning symbols for licence server */
+.badge-licence-noup{
+    padding: 0;
+    color: red;
+    cursor: default;
 }
-
-#partners #logos {
-  padding: 10px;
-  text-align: center;
-}
-
-#partners #logos .nesi-footer-logo img {
-  margin-right: 100px;
-  height: 60px;
-}
-
-#partners #logos img {
-  height: 40px;
-  margin: 10px;
+.badge-licence-lowup{
+    padding: 0;
+    color: yellow;
+    cursor: default;
 }
 
 
