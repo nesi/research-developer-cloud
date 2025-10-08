@@ -5,7 +5,10 @@ As opposed to `mkdocs_hooks.py` which works only in template step, (e.g. `overri
 If this is confusing, ask Cal to explain.
 """
 
-# Allows the use of {{ FOO }} variable in `docs/*.md`.
+import os
+import json
+
+module_list_path = os.getenv("MODULE_LIST_PATH", "docs/assets/module-list.json")
 
 
 def define_env(env):
@@ -18,18 +21,5 @@ def define_env(env):
         used to perform a transformation
     """
 
-#     # add to the dictionary of variables available to markdown pages:
-#     env.variables.foo = "bar"
-    return
-
-
-# def on_pre_page_macros(env):
-#     return
-
-
-# def on_post_page_macros(env):
-#     return
-
-
-# def on_post_build(env):
-#     return
+    # add to the dictionary of variables available to markdown pages:
+    env.variables.applications = json.load(open(module_list_path))

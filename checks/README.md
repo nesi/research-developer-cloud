@@ -9,18 +9,12 @@ Tests should be made as Python scripts to allow flexibility of use. Currently th
 
 ## Spellcheck
 
-*This linter is defined in [run_pyspelling.py](run_pyspelling.py) script.*
+*This linter is defined in [run_spell_check.py](run_spell_check.py) script.*
 
 Spellcheck pipeline settings can be modified in [.spellcheck.yml](../.spellcheck.yml).
 
 List of custom words can be found in [dictionary.txt](../docs/assets/glossary/dictionary.txt),
 however you **should not edit this manually**, see [adding-words-to-dictionary](../docs/CONTRIBUTING.md#adding-words-to-dictionary).
-
-This list is automatically updated daily in the case of docs.nesi, but not the other sites.
-You should occasionally run 
-`wget -O docs/assets/glossary/dictionary.txt https://raw.githubusercontent.com/nesi/nesi-wordlist/main/outputs/dictionary.txt`
-to keep it up to date.
- 
 
 ### Limitations
 
