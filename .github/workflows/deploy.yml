@@ -41,8 +41,6 @@ jobs:
             mkdocs-
       - name: Install Python dependencies
         run: pip install -r requirements.txt
-      - name: Fetch Remote Files
-        run: bash .github/fetch_includes.sh
       - name: Build documentation
         run: |
               mkdocs build --clean --quiet
