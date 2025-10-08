@@ -6,10 +6,8 @@ position: 1
 title: Security Policy
 ---
 
-## NeSI Security Policy
+## Security Policy
 
 !!! note
-    NeSI has published a new security policy [NeSI Security Policy](https://www.nesi.org.nz/about-us/security-privacy/security-policy)
+    We have published a new security policy [NeSI Security Policy](https://www.nesi.org.nz/about-us/security-privacy/security-policy)
 
-
-##
