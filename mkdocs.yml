@@ -66,20 +66,6 @@ plugins:
   - git-revision-date-localized:
       enable_creation_date: true
   - open-in-new-tab
-  - rss:
-      categories:
-      - tags
-      - title
-      json_feed_enabled: false
-      pretty_print: true
-      match_path: .*.md
-      feed_title: NeSI Support Docs Updates
-      length: 100
-      feeds_filenames:
-        rss_created: page_creation.xml
-        rss_updated: page_update.xml
-  - redirects:
-      map_file: docs/redirect_map.yml
   - awesome-pages:
       filename: .pages.yml
  # - git-authors
