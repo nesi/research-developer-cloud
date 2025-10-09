@@ -4,7 +4,7 @@ label_names:
 - images
 - convert
 position: 1
-title: Converting Image types
+title: Converting Image Types
 vote_count: 1
 vote_sum: 1
 ---
