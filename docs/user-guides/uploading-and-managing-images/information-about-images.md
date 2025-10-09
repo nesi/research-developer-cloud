@@ -11,7 +11,7 @@ vote_sum: 1
 We provide a range of images for use in the Researcher Developer Cloud (RDC). These images are grouped into four visibility categories:
 
 ## Public
-hese images are available to all RDC users. They are the latest versions we’ve produced and are recommended for general use unless you have specific requirements.
+These images are available to all RDC users. They are the latest versions we’ve produced and are recommended for general use unless you have specific requirements.
 
 - **Virtual Machine (VM) images** typically follow the naming pattern:  
   `rdc-<OS>-<version>-<description>`  
