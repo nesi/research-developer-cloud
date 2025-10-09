@@ -1,4 +1,5 @@
 nav:
+- information-about-images.md
 - with-the-dashboard
 - with-the-cli
 - converting_image-types.md
