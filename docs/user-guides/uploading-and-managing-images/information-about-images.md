@@ -22,7 +22,7 @@ These images are available to all RDC users. They are the latest versions we’v
   - RDC terms and conditions
 
 - **Kubernetes images** follow a more detailed naming convention:  
-  `<OS>-<version>-<container runtime>-<special packages>-<Kubernetes version>`  
+  `<OS>-<version>-<container runtime>-<special packages (optional)>-<Kubernetes version>`  
   Examples:
   - `rocky-9-containerd-nvidia-v1.32.7` (GPU support)
   - `rocky-9-containerd-v1.33.3` (standard image)
@@ -34,7 +34,11 @@ Images created specifically within your project. These are only visible and usab
 Images that were originally private but have been shared with you by another project.
 
 ## Community
-Retired images that may still be in use. These do not require special access permissions. Over time, community images may be cleaned up. The list is growing, so we recommend using the search function to locate specific images.
+This visibility includes a growing list of images shared by the community.
+
+Public images that are no longer actively maintained—but may still be in use—are moved to the Community category. A date is appended to each image name to indicate when it was retired. These images do not require special access permissions.
+
+Over time, community images may be cleaned up. Because the list is expanding, we recommend using the search function to locate specific images.
 
 ## Image Lifecycle & Best Practices
 Public images are regularly maintained. When a new image is released (e.g. with a newer OS version), the older one is moved to **Community** visibility before eventual removal.

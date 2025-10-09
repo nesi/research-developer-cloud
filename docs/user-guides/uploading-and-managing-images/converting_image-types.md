@@ -3,7 +3,7 @@ hidden: false
 label_names:
 - images
 - convert
-position: 1
+position: 2
 title: Converting Image Types
 vote_count: 1
 vote_sum: 1
