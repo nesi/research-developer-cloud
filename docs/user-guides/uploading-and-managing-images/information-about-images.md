@@ -28,7 +28,7 @@ These images are available to all RDC users. They are the latest versions we’v
   - `rocky-9-containerd-v1.33.3` (standard image)
 
 ## Private
-Images created specifically within your project. These are only visible and usable within that project.
+Images created specifically within your project. These are only visible and usable within that project. It is important that you try to give an unique name.
 
 ## Shared
 Images that were originally private but have been shared with you by another project.
