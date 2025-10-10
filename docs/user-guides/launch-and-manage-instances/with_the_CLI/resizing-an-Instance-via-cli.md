@@ -10,7 +10,7 @@ vote_sum: 1
 ---
 
 !!! note
-    The openstack CLI will need to be setup to interact with the FlexiHPC system. Please read [Setting up your CLI environment](../../setting-up-your-CLI-environment/index.md) to interact with FlexiHPC to get started.
+    The openstack CLI will need to be setup to interact with the FlexiHPC system. Please read [Setting up your CLI environment](../../set-up-your-CLI-environment/index.md) to interact with FlexiHPC to get started.
 
 When resizing an instance via the CLI there are few details you will need, the `Instance ID` for the compute instance you want to resize and the `Flavor ID` you want to resize the instance to.
 

@@ -6,14 +6,14 @@ label_names:
 - manage
 - CLI
 position: 1
-title: Upload an Image via CLI
+title: Uploading images
 vote_count: 1
 vote_sum: 1
 ---
 
 !!! note
     The openstack CLI will need to be setup to interact with the FlexiHPC system. Please read 
-    [Setting up your CLI environment](../../setting-up-your-CLI-environment/index.md) to interact with FlexiHPC to get started.
+    [Setting up your CLI environment](../../set-up-your-CLI-environment/index.md) to interact with FlexiHPC to get started.
 
 To upload an image to FlexiHPC we will be using the command `openstack image create` to upload the image.
 
