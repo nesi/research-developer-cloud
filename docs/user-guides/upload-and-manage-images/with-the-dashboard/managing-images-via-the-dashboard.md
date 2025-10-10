@@ -4,8 +4,8 @@ label_names:
 - images
 - upload
 - manage
-position: 1
-title: Upload an Image via the Dashboard
+position: 2
+title: Managing images
 vote_count: 1
 vote_sum: 1
 ---

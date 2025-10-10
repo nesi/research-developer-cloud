@@ -13,7 +13,7 @@ title: Creating and Managing EC2 Credentials via CLI
 For using the OpenStack S3 API:s you need to generate an additional set of credentials. These can then be used to store data in the Swift Object store for applications that don’t have native Swift support but do support the S3 interfaces.
 
 !!! note
-    The openstack CLI will need to be setup to interact with the FlexiHPC system. Please read [Setting up your CLI environment](../setting-up-your-CLI-environment/index.md) to interact with FlexiHPC to get started.
+    The openstack CLI will need to be setup to interact with the FlexiHPC system. Please read [Setting up your CLI environment](../set-up-your-CLI-environment/index.md) to interact with FlexiHPC to get started.
 
 ## Create and fetch credentials using the CLI
 

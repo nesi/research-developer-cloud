@@ -10,7 +10,7 @@ vote_sum: 1
 ---
 
 !!! note
-    The openstack CLI will need to be setup to interact with the FlexiHPC system. Please read [Setting up your CLI environment](../../setting-up-your-CLI-environment/index.md) to interact with FlexiHPC to get started.
+    The openstack CLI will need to be setup to interact with the FlexiHPC system. Please read [Setting up your CLI environment](../../set-up-your-CLI-environment/index.md) to interact with FlexiHPC to get started.
 
 When adding or removing `Security Groups` from an instance via the CLI there are few details you will need, the `Instance ID` for the compute instance you want to adjust and the `Security Group ID` you want to add or remove from the instance.
 
