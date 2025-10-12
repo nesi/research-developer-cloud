@@ -8,9 +8,11 @@ vote_count: 1
 vote_sum: 1
 ---
 
+## Image Categories
+
 We provide a range of images for use in the Researcher Developer Cloud (RDC). These images are grouped into four visibility categories:
 
-## Public
+### Public
 These images are available to all RDC users. They are the latest versions we’ve produced and are recommended for general use unless you have specific requirements.
 
 - **Virtual Machine (VM) images** typically follow the naming pattern:  
@@ -27,14 +29,14 @@ These images are available to all RDC users. They are the latest versions we’v
   - `rocky-9-containerd-nvidia-v1.32.7` (GPU support)
   - `rocky-9-containerd-v1.33.3` (standard image)
 
-## Private
+### Private
 Images created specifically within your project. These are only visible and usable within that project. It is important that you try to give an unique name.
 
-## Shared
+### Shared
 Images that were originally private but have been shared with you by another project.
 
-## Community
-This visibility includes a growing list of images shared by the community.
+### Community
+You can view a growing collection of images shared by the community. These community images are contributed by users who wish to showcase their work and make it available to others.
 
 Public images that are no longer actively maintained—but may still be in use—are moved to the Community category. A date is appended to each image name to indicate when it was retired. These images do not require special access permissions.
 
