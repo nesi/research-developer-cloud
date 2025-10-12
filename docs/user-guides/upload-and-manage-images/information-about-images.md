@@ -53,5 +53,5 @@ Because image lifecycles can be short, we recommend:
 To help others (and your future self), we recommend adding metadata to your images to describe the starting image, their contents (if anything else was added) as well as any other description fields that you feel pertinent. 
 
 <figure markdown>
-  ![Screenshot of image metadata fields in the RDC dashboard](../../../assets/images/flexi/image-metadata.png)
+  ![Screenshot of image metadata fields in the RDC dashboard](../../assets/images/flexi/image-metadata.png)
 </figure>
