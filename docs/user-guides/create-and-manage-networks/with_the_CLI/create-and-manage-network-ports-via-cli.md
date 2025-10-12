@@ -11,7 +11,7 @@ vote_sum: 1
 
 !!! note
     The openstack CLI will need to be setup to interact with the FlexiHPC system. 
-    Please read [Setting up your CLI environment](../../set-up-your-CLI-environment/index.md) to interact with FlexiHPC to get started.
+    Please read [Setting up your CLI environment](../../set-up-your-cli-environment/index.md) to interact with FlexiHPC to get started.
 
 First we need to get a few details, `Network ID` we want to connect to the network port to, `the Subnet ID` we want to connect the IP to and the `IP Address` we want to assign to the network port unless you want it to be assigned an IP from the DHCP
 

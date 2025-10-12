@@ -13,7 +13,7 @@ vote_sum: 1
 
 !!! note
     The openstack CLI will need to be setup to interact with the FlexiHPC system. Please read 
-    [Setting up your CLI environment](../../set-up-your-CLI-environment/index.md) to interact with FlexiHPC to get started.
+    [Setting up your CLI environment](../../set-up-your-cli-environment/index.md) to interact with FlexiHPC to get started.
 
     We highly recommend that you supply the parameter `--key-name` to allow connections with your SSH key
 
