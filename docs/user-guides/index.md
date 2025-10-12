@@ -12,7 +12,7 @@ Our platform's building blocks include:
 `Images`
 :   Tailored operating systems to meet your research computing and data needs. Ready-to-use options available, as well as capability to create custom images and contribute to a pool of community-developed images.
 
-    → Get started with our [Images User Guides](uploading-and-managing-images/index.md)
+    → Get started with our [Images User Guides](upload-and-manage-images/index.md)
 
 `Storage`
 :   Scalable storage space that can be dynamically mounted to your Compute instances. Options to encrypt storage volumes for added security.
