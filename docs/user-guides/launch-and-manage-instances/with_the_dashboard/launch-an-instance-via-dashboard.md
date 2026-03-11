@@ -17,7 +17,7 @@ Select the project you would like to deploy the new instance too (Use the projec
   ![Alt text](../../../assets/images/flexi/project-selector.png)
 </figure>
 
-Open the `Project` tab, open the `Compute` tab and select `Instances`
+In the `Project` menu, navigate to `Compute` and select `Instances`.
 
 Click `Launch Instance`
 
