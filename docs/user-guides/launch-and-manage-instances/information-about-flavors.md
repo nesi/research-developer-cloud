@@ -30,10 +30,11 @@ Where:
 - **Y** is the number of vCPUs
 - **Z** is the amount of memory (RAM) in gigabytes
 
-Compute flavors define the amount of virtual CPU and memory available to an instance. vCPUs are provided as scheduled resources, meaning they are time‑shared across the underlying physical CPUs and performance can vary depending on overall system load. Memory, on the other hand, is allocated to the instance as a fixed amount and is more tightly constrained by the platform to provide predictable availability for running workloads. This design allows efficient use of shared infrastructure while ensuring applications have reliable access to the memory they request.
+Compute flavors define the amount of virtual CPU and memory available to an instance. vCPUs are provided as scheduled resources, meaning they are time-shared across the underlying physical CPUs and performance can vary depending on overall system load. Memory, on the other hand, is allocated to the instance as a fixed amount and is more tightly constrained by the platform to provide predictable availability for running workloads. This design allows efficient use of shared infrastructure while ensuring applications have reliable access to the memory they request.
 
 By default, you have access to the **balanced** category.
-| flavor            | vCPUs | RAM (in MB) | Disk (GB) |
+
+| flavor name       | vCPUs | RAM (in MB) | Disk (GB) |
 | ----------------- | ---- | ------------------- | --------- |
 | balanced1.1cpu2ram | 1 | 2048 | 30 |
 | balanced1.2cpu4ram | 2 | 4096 | 30 |
@@ -44,12 +45,10 @@ By default, you have access to the **balanced** category.
 
 ### Need a special flavor?
 We also offer additional flavors designed for specific use cases, including:
-- compute‑heavy workloads
-- memory‑heavy workloads
+- compute-heavy workloads
+- memory-heavy workloads
 - small flavors for development and testing
-- GPU‑enabled workloads
+- GPU-enabled workloads
 
-
-If you have any questions or would like to request access to a specific flavor, please submit a support request {% include "partials/support_request.html" %}.
-
+If you have any questions or would like to request access to a specific flavor, please contact the REANNZ support.
 
