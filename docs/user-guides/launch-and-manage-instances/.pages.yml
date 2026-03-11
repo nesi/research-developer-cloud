@@ -1,4 +1,5 @@
 nav:
+  - information-about-flavors.md
   - with_the_dashboard
   - with_the_CLI
   - other_tools

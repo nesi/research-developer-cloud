@@ -19,15 +19,15 @@ These images are available to all RDC users. They are the latest versions we’v
   `rdc-<OS>-<version>-<description>`  
   For example: `rdc-rocky-9-upstream`  
   “Upstream” indicates the image is built from base OS provider images. These include:
-  - `fail2ban` for basic security
-  - A message of the day
-  - RDC terms and conditions
+    - `fail2ban` for basic security
+    - A message of the day
+    - RDC terms and conditions
 
 - **Kubernetes images** follow a more detailed naming convention:  
   `<OS>-<version>-<container runtime>-<special packages (optional)>-<Kubernetes version>`  
   Examples:
-  - `rocky-9-containerd-nvidia-v1.32.7` (GPU support)
-  - `rocky-9-containerd-v1.33.3` (standard image)
+    - `rocky-9-containerd-nvidia-v1.32.7` (GPU support)
+    - `rocky-9-containerd-v1.33.3` (standard image)
 
 ### Private
 Images created specifically within your project. These are only visible and usable within that project. It is important that you try to give an unique name.
