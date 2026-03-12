@@ -3,8 +3,6 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
-  schedule:
-    - cron: '00 12 * * *' # Should run 1 hour after module list update.
 env:
   PYTHON_VERSION: 3.x
   GH_TOKEN: ${{ github.token }}
