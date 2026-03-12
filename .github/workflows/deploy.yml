@@ -4,7 +4,7 @@ on:
     branches: [main]
   workflow_dispatch:
 env:
-  PYTHON_VERSION: 3.x
+  PYTHON_VERSION: 3.14.2
   GH_TOKEN: ${{ github.token }}
 permissions:
   contents: write
