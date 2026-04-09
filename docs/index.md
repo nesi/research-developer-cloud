@@ -6,7 +6,7 @@ hide: toc
 
 [cards cols=3 (./docs/cards-services.yaml)]
 
-NeSI is building a research cloud computing platform for easier and more adaptable collaboration around research data.
+REANNZ is building a research cloud computing platform for easier and more adaptable collaboration around research data.
 
 Research teams can use our Research Developer Cloud to develop novel solutions that enable research.
 
