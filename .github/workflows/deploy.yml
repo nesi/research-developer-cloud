@@ -3,6 +3,8 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+  schedule:
+    - cron: '00 12 * * *' # Should run 1 hour after module list update.
 env:
   PYTHON_VERSION: 3.13
   GH_TOKEN: ${{ github.token }}
@@ -45,6 +47,8 @@ jobs:
             mkdocs-
       - name: Install Python dependencies
         run: pip install -r requirements.txt
+      - name: Fetch Remote Files
+        run: bash .github/fetch_includes.sh
       - name: Build documentation
         run: |
               mkdocs build --clean --quiet
