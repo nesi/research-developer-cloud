@@ -4,4 +4,4 @@ nav:
   - creating-and-managing-ec2-credentials-via-cli.md
   - using-boto3-to-interact-with-object-storage.md
   - using-cyberduck-to-interact-with-object-storage.md
-  - ...
+  - "*"
