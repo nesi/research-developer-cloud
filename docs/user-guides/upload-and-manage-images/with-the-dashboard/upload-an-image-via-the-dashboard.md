@@ -10,7 +10,7 @@ vote_count: 1
 vote_sum: 1
 ---
 
-Log into the [NeSI FlexiHPC Dashboard](https://dashboard.cloud.nesi.org.nz/)
+Log into the [FlexiHPC Dashboard](https://dashboard.cloud.nesi.org.nz/)
 
 Select the project you would like to deploy the new instance too (Use the project selector on the top left-hand side):
 
