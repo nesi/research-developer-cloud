@@ -5,4 +5,4 @@ nav:
   - other_tools
   - connect-to-instance-ssh.md
   - default-user-nesi-images.md
-  - ...
+  - "*"

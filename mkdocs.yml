@@ -9,13 +9,23 @@ theme:
   language: en
   logo: assets/icons/logo_reannz.svg
   palette:
-    - primary: custom
+      # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+      # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
       scheme: default
       toggle:
         icon: material/lightbulb
         name: Switch to dark mode
-    - primary: custom
+      primary: custom
+      # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
       scheme: slate
+      primary: custom
+      accent: custom
       toggle:
         icon: material/lightbulb-outline
         name: Switch to light mode
@@ -66,7 +76,7 @@ plugins:
   - git-revision-date-localized:
       enable_creation_date: true
   - open-in-new-tab
-  - awesome-pages:
+  - awesome-nav:
       filename: .pages.yml
  # - git-authors
   - tags:
@@ -75,6 +85,11 @@ plugins:
       on_error_fail: true
       verbose: false
 extra:
+  slurm: slurm-25.05.6
+  status: 
+  - deprecated
+  - new
+  - tutorial
   analytics:
     provider: google
     property: G-C9SP9NWT3Z

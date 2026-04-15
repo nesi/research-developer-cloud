@@ -8,4 +8,4 @@ nav:
   - create-and-manage-keypairs     
   - create-and-manage-object-storage
   - set-up-your-cli-environment
-  - ...
+  - "*"
