@@ -8,6 +8,7 @@ title: Security Policy
 
 ## Security Policy
 
-!!! note
-    We have published a new security policy [NeSI Security Policy](https://www.nesi.org.nz/about-us/security-privacy/security-policy)
+The REANNZ HPC Platform's Security Policy governs the design, operation, and delivery of all REANNZ HPC services and capabilities, including the Research Developer Cloud. 
+
+To read the full policy, visit our [Security Policy page](https://docs.nesi.org.nz/Policy/Security_Policy/).
 
