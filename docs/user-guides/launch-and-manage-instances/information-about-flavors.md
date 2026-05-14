@@ -50,5 +50,5 @@ We also offer additional flavors designed for specific use cases, including:
 - small flavors for development and testing
 - GPU-enabled workloads
 
-If you have any questions or would like to request access to a specific flavor, please contact the REANNZ support.
+If you have any questions or would like to request access to a specific flavor, please [contact Support](mailto:support@nesi.org.nz).
 
