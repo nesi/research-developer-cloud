@@ -9,7 +9,7 @@ vote_count: 1
 vote_sum: 1
 ---
 
-Log into the [NeSI FlexiHPC Dashboard](https://dashboard.cloud.nesi.org.nz/)
+Log into the [FlexiHPC Dashboard](https://dashboard.cloud.nesi.org.nz/)
 
 Select the project you would like to deploy the new instance too (Use the project selector on the top left-hand side):
 
@@ -86,7 +86,7 @@ Within the `Launch Instance` dialog box there are the following values:
 :   To add a network to the instance, click the `^` in the Available field.
 
 !!! note
-    If you haven't configured a network prior to the creation of a compute instance then the recommend network should be the one that has the same name as the project you are in. Example, I am in the `NeSI-SandBox-Environment` so I will pick the `NeSI-SandBox-Environment` network.
+    If you haven't configured a network prior to the creation of a compute instance then the recommend network should be the one that has the same name as the project you are in. Example, I am in the `SandBox-Environment` so I will pick the `SandBox-Environment` network.
 
     You shouldn't need to add the instance to an external network as a floating IP will be added later on should you need to access the instance from outside the FlexiHPC network.
 
