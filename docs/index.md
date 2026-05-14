@@ -6,7 +6,7 @@ hide: toc
 
 [cards cols=3 (./docs/cards-services.yaml)]
 
-NeSI is building a research cloud computing platform for easier and more adaptable collaboration around research data.
+REANNZ is building a research cloud computing platform for easier and more adaptable collaboration around research data.
 
 Research teams can use our Research Developer Cloud to develop novel solutions that enable research.
 
@@ -20,6 +20,6 @@ We invite you to apply for early access if you are:
  
 - Seeking a locally owned and sovereign cloud computing platform to build and develop tools that can support research data collaborations 
  
-- Interested in partnering with NeSI to apply DevOps approaches and best practice to your research activities
+- Interested in partnering with REANNZ to apply DevOps approaches and best practice to your research activities
 
 [Apply for early access](https://docs.google.com/forms/d/e/1FAIpQLScYsLxe1HswOW9DFUNuhyTcYhdWY7-SZqTF3RpeBpFcyNdhUA/viewform){ .md-button .md-button--primary }
