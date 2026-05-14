@@ -11,7 +11,7 @@ title: Create and manage keypairs via the dashboard
 
 ## Create a Keypair
 
-Log into the [NeSI FlexiHPC Dashboard](https://dashboard.cloud.nesi.org.nz/)
+Log into the [FlexiHPC Dashboard](https://dashboard.cloud.nesi.org.nz/)
 
 Select the project you would like to deploy the new instance too (Use the project selector on the top left-hand side):
 
@@ -67,7 +67,7 @@ ssh-add yourPrivateKey.pem
 
 ## Import a Key Pair
 
-Log into the [NeSI FlexiHPC Dashboard](https://dashboard.cloud.nesi.org.nz/)
+Log into the [FlexiHPC Dashboard](https://dashboard.cloud.nesi.org.nz/)
 
 Select the project you would like to deploy the new instance too (Use the project selector on the top left-hand side):
 
