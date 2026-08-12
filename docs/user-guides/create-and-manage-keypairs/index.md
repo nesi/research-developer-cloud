@@ -14,11 +14,14 @@ Key pairs are SSH credentials that are injected into a FlexiHPC instance when it
 
 You are able to create a new SSH Key pair on the RDC or import one of your own.
 
-
 Key pairs can be managed a few ways
 
 - [Create and manage key pairs via the dashboard](create-and-manage-keypairs-with-the-dashboard.md)
 
 - [Create and manage key pairs via CLI](create-and-manage-keypairs-via-cli.md)
 
-- [Secure and rotate ssh keys](secure-and-rotate-ssh-keys.md)
+- [Secure your SSH keys](secure-your-ssh-keys.md)
+
+- [Rotate SSH keys](rotate-ssh-keys.md)
+
+- [If a key is compromised](if-a-key-is-compromised.md)
