@@ -6,7 +6,7 @@ label_names:
 - manage
 - dashboard
 position: 1
-title: Create and manage networks via the dashboard
+title: Create and Manage Networks via the dashboard
 ---
 
 ## Create a Network

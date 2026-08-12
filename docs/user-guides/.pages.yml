@@ -4,6 +4,7 @@ nav:
   - upload-and-manage-images
   - create-and-manage-volumes
   - create-and-manage-networks
+  - use-a-service-account
   - create-and-manage-identity
   - create-and-manage-keypairs     
   - create-and-manage-object-storage

@@ -5,7 +5,7 @@ label_names:
 - create
 - manage
 position: 1
-title: Create and Manage identity
+title: Create and Manage Identity
 vote_count: 1
 vote_sum: 1
 ---

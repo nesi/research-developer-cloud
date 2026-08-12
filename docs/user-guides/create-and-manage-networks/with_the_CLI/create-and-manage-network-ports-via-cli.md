@@ -4,7 +4,7 @@ label_names:
 - instance
 - launch
 position: 2
-title: Create and manage network ports via CLI
+title: Create and Manage Network Ports via CLI
 vote_count: 1
 vote_sum: 1
 ---

@@ -6,7 +6,7 @@ label_names:
 - manage
 - dashboard
 position: 1
-title: Create and manage network ports with the dashboard
+title: Create and Manage Network Ports with the dashboard
 ---
 
 ## Create a Network port

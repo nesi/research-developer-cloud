@@ -20,3 +20,5 @@ Key pairs can be managed a few ways
 - [Create and manage key pairs via the dashboard](create-and-manage-keypairs-with-the-dashboard.md)
 
 - [Create and manage key pairs via CLI](create-and-manage-keypairs-via-cli.md)
+
+- [Secure and rotate ssh keys](secure-and-rotate-ssh-keys.md)

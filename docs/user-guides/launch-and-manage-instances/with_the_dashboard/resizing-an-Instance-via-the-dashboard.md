@@ -4,7 +4,7 @@ label_names:
 - instance
 - resize
 position: 2
-title: Resizing an Instance via the Dashboard
+title: Resizing an Instance via the dashboard
 vote_count: 1
 vote_sum: 1
 ---

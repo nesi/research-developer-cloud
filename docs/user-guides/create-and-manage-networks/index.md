@@ -5,7 +5,7 @@ label_names:
 - create
 - manage
 position: 1
-title: Create and Manage networks
+title: Create and Manage Networks
 vote_count: 1
 vote_sum: 1
 ---

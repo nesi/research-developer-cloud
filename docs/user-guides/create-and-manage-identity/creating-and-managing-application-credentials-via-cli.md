@@ -5,7 +5,7 @@ label_names:
 - create
 - manage
 - cli
-title: Creating and Managing Application Credentials via CLI
+title: Create and Manage Application Credentials via CLI
 ---
 
 !!! note

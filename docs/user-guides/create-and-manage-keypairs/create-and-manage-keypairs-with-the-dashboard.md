@@ -6,7 +6,7 @@ label_names:
 - manage
 - dashboard
 position: 1
-title: Create and manage keypairs via the dashboard
+title: Create and Manage Keypairs via the dashboard
 ---
 
 ## Create a Keypair

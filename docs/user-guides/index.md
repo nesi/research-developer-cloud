@@ -24,6 +24,12 @@ Our platform's building blocks include:
 
     → Get started with our [Networks User Guides](create-and-manage-networks/index.md)
 
+`Service Accounts`
+:   Use of Service Accounts on your projects versus personnal accounts.
+
+    → Get started with our [Service Account User Guides](use-a-service-account/index.md)
+
+
 `Identity`
 :   Identity management services to create application credentials and control access to projects.
 

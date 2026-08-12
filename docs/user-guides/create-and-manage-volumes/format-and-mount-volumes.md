@@ -6,7 +6,7 @@ label_names:
 - manage
 - dashboard
 position: 1
-title: Format and Mount volumes
+title: Format and Mount Volumes
 ---
 
 # Format and Mount a Volume

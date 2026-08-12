@@ -6,7 +6,7 @@ label_names:
 - manage
 - CLI
 position: 1
-title: Managing images
+title: Manage Images
 vote_count: 1
 vote_sum: 1
 ---
