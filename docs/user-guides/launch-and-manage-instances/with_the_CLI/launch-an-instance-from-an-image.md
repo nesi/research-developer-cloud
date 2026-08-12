@@ -6,7 +6,7 @@ label_names:
 - cli
 - image
 position: 2
-title: Launch an Instance from an Image
+title: Launch an Instance from an image
 vote_count: 1
 vote_sum: 1
 ---

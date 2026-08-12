@@ -6,7 +6,7 @@ label_names:
 - manage
 - dashboard
 position: 1
-title: Create and manage object storage via the dashboard
+title: Create and Manage Object Storage via the dashboard
 ---
 
 ## Creating an object storage container

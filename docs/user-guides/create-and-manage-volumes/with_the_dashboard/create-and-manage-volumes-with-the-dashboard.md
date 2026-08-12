@@ -6,7 +6,7 @@ label_names:
 - manage
 - dashboard
 position: 1
-title: Create and manage volumes via the dashboard
+title: Create and Manage Volumes via the dashboard
 ---
 
 ## Create a volume

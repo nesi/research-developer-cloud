@@ -4,7 +4,7 @@ label_names:
 - instance
 - resize
 position: 2
-title: Manage Security Groups of an Instance via the Dashboard
+title: Manage Security Groups of an instance via the dashboard
 vote_count: 1
 vote_sum: 1
 ---

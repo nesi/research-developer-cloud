@@ -5,7 +5,7 @@ label_names:
 - create
 - manage
 position: 1
-title: Create and Manage identity
+title: Create and Manage Identity
 vote_count: 1
 vote_sum: 1
 ---
@@ -19,6 +19,8 @@ Within FlexiHPC you are able to mange `Application Credentials` from the dashboa
 - [Creating and Managing Application Credentials from the dashboard](creating-and-managing-application-credentials-with-the-dashboard.md)
 
 - [Creating and Managing Application Credentials via CLI](creating-and-managing-application-credentials-via-cli.md)
+
+- [Use a Service Account](use-a-service-account.md)
 
 !!! note
     The Application Credential is dependent on the user account that created it, so it will terminate if that account is ever deleted, or loses access to the relevant role.

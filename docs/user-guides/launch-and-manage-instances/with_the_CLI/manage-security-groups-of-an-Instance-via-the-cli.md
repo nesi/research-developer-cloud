@@ -4,7 +4,7 @@ label_names:
 - instance
 - resize
 position: 2
-title: Manage Security Groups of an Instance via CLI
+title: Manage Security Groups of an instance via CLI
 vote_count: 1
 vote_sum: 1
 ---

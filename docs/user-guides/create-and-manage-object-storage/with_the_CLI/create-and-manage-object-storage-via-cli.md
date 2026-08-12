@@ -6,7 +6,7 @@ label_names:
 - manage
 - cli
 position: 1
-title: Create and manage object storage via CLI
+title: Create and Manage Object Storage via CLI
 ---
 
 !!! note

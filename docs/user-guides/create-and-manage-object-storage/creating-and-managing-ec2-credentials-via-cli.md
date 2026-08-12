@@ -5,7 +5,7 @@ label_names:
 - create
 - manage
 - cli
-title: Creating and Managing EC2 Credentials via CLI
+title: Create and Manage EC2 Credentials via CLI
 ---
 
 ## Overview

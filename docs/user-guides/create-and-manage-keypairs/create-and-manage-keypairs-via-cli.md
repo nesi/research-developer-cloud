@@ -6,7 +6,7 @@ label_names:
 - manage
 - cli
 position: 1
-title: Create and manage keypairs via CLI
+title: Create and Manage Keypairs via CLI
 ---
 
 !!! note

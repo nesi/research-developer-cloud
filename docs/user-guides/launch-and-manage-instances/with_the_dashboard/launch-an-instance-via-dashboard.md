@@ -4,7 +4,7 @@ label_names:
 - instance
 - launch
 position: 2
-title: Launch an Instance via Dashboard
+title: Launch an Instance via the dashboard
 vote_count: 1
 vote_sum: 1
 ---

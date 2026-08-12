@@ -6,7 +6,7 @@ label_names:
 - manage
 - cli
 position: 1
-title: Create and manage volumes via CLI
+title: Create and Manage Volumes via CLI
 ---
 
 !!! note

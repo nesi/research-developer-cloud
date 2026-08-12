@@ -1,0 +1,8 @@
+nav:
+  - index.md
+  - create-and-manage-keypairs-with-the-dashboard.md
+  - create-and-manage-keypairs-via-cli.md
+  - secure-your-ssh-keys.md
+  - rotate-ssh-keys.md
+  - if-a-key-is-compromised.md
+  - "*"

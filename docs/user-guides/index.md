@@ -25,16 +25,16 @@ Our platform's building blocks include:
     → Get started with our [Networks User Guides](create-and-manage-networks/index.md)
 
 `Identity`
-:   Identity management services to create application credentials and control access to projects.
+:   Identity management services to create application credentials, share a project service account, and control access to projects.
 
     → Get started with our [Identity User Guides](create-and-manage-identity/index.md)
 
+    → Keep project access when a team member leaves with a [Service Account](create-and-manage-identity/use-a-service-account.md)
+
 `Object Storage`
-:   Openstack S3 compatiable object storage.
+:   Openstack S3 compatible object storage.
 
     → Get started with our [Object Storage User Guides](create-and-manage-object-storage/index.md)
 
 `Application Programming Interface (API)`
 :   All services are programmable via a public API to enable repeatable definition of infrastructure through software code.
-
-

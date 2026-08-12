@@ -3,7 +3,7 @@ label_names:
 - security-groups
 - launch
 - cli
-title: Manage Security groups via CLI
+title: Manage Security Groups via CLI
 vote_count: 1
 vote_sum: 1
 ---

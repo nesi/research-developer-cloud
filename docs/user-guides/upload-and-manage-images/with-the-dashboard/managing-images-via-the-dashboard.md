@@ -5,7 +5,7 @@ label_names:
 - upload
 - manage
 position: 2
-title: Managing images
+title: Manage Images
 vote_count: 1
 vote_sum: 1
 ---
