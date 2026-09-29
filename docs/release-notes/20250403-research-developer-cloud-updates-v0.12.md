@@ -3,19 +3,17 @@ hidden: false
 label_names:
 - release-note
 position: 3
-title: Research Developer Cloud updates v0.12 - 20250403
+title: RDC Updates v0.12
+description: OpenStack services on the Research Developer Cloud upgraded to the Caracal release
 ---
 
-##Infrastructure
-
-####OpenStack Upgrade – Caracal Release
-
-We’ve successfully upgraded our OpenStack services to the Caracal release, following the SLURP cadence (https://docs.openstack.org/project-team-guide/release-cadence-adjustment.html).
+We’ve successfully upgraded our OpenStack services to the Caracal release, following the [SLURP cadence](https://docs.openstack.org/project-team-guide/release-cadence-adjustment.html).
 
 This upgrade focused on the OpenStack service containers and their underlying components, including databases, RabbitMQ, and other dependencies. The process involved:
 
-Kayobe seed automation and configuration sync
-Container version updates pulled via local Pulp mirror
-Rolling service deployment across environments
-Database migrations and service bring-up
+- Kayobe seed automation and configuration sync
+- Container version updates pulled via local Pulp mirror
+- Rolling service deployment across environments
+- Database migrations and service bring-up
+
 This upgrade ensures we remain aligned with upstream OpenStack developments, improving security, performance, and long-term maintainability of our cloud platform.
